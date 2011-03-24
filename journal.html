@@ -1,0 +1,12 @@
+---
+layout: default
+title: Journal
+---
+{% for post in site.posts %}
+    <h2><a href="{{ post.url }}">{{{post.title}}</a></h2>
+    <div class="post_date">{{ post.date | date_to_string }}</div>
+    <div class="post_content">
+        {{ post.content | strip_html | truncatewords: 100 }} 
+        <a href="{{ post.url }}">read more</a>
+    </div>    
+{% endfor %}
