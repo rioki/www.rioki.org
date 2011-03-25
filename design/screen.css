@@ -1,0 +1,76 @@
+
+/* Basic Style */
+
+@font-face {
+    font-family: 'DejaVuSansExtraLight';
+    src: url('dejavusans-extralight-webfont.eot');
+    src: url('dejavusans-extralight-webfont.eot?iefix') format('eot'),
+         url('dejavusans-extralight-webfont.woff') format('woff'),
+         url('dejavusans-extralight-webfont.ttf') format('truetype'),
+         url('dejavusans-extralight-webfont.svg#webfontPjSsTf0y') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'DejaVuSansExtraLight', sans-serif;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #ff5f0d;
+}
+
+/* Basic Layout */
+
+#page {
+    width: 640px;
+    margin: 0 auto;
+}
+
+#header {
+    height: 100px;    
+}
+
+#site_title {
+    float: left;
+}
+
+#topmenu {
+    float: right;
+    margin: 25px 0;
+}
+
+#topmenu a {
+    font-weight: normal;
+    font-size: 175%;
+}
+
+#content {
+    text-align: justify;
+}
+
+#footer {
+    margin-top: 10px;
+    border-top: 1px solid silver;
+    text-align: center;
+    font-size: 75%;
+    color: gray;
+}
+
+/* Post Special Formating */
+
+.post_date {
+    width: 45px;
+    padding: 3px 15px;
+    margin: 5px;
+    text-align: center;
+    background: silver;
+    font-weight: bold;
+    float: left;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}

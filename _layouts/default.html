@@ -4,25 +4,27 @@
        <meta charset="utf-8" />
        <title>{{ page.title }} - {{ site.title }}</title>
        <meta name="author" content="{{ site.author }}" />
-       <link rel="stylesheet" href="/css/screen.css" />
+       <link rel="stylesheet" href="/design/screen.css" />
        <link rel="alternate" type="application/atom+xml" title="Rioki's Corner Feed" href="/atom.xml" />
     </head>
     <body>
-        <div id="header">
-            <div id="title"><a href="/">{{ site.title }}</a></div>
-            <div id="menu">
-                <a href="/journal.html">Journal</a>
-                <a href="/about.html">About</a>
-                <a href="/contact.html">Contact</a>
+        <div id="page">
+            <div id="header">
+                <div id="site_title"><a href="/"><img src="/design/rioki.png" alt="Rioki" /></a></div>
+                <div id="topmenu">
+                    <a href="/journal.html">Journal</a>
+                    <a href="/about.html">About</a>
+                    <a href="/contact.html">Contact</a>
+                </div>
             </div>
-        </div>
-        <div id="content">
-        <h1>{{ page.title }}</h1>
-        {{ content }}
-        </div>
-        <div id="footer">
-        &copy; 2009-2011 {{ site.author }} | 
-        <a href="/imprint.html">Imprint</a>
+            <div id="content">
+                <h1>{{ page.title }}</h1>
+                {{ content }}
+            </div>
+            <div id="footer">
+                &copy; 2009-2011 {{ site.author }} | 
+                <a href="/imprint.html">Imprint</a>
+            </div>
         </div>
     </body>
 </html>
