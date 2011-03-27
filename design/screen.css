@@ -51,12 +51,17 @@ a {
     text-align: justify;
 }
 
+#content img {
+    margin: 5px;
+}
+
 #footer {
     margin-top: 10px;
     border-top: 1px solid silver;
     text-align: center;
     font-size: 75%;
     color: gray;
+	clear: both;
 }
 
 /* Post Special Formating */
