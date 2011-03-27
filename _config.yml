@@ -3,4 +3,5 @@ url:      http://www.rioki.org
 author:   Sean Farrell
 email:    sean.farrell@rioki.org
 markdown: maruku
+lsi: false
 pygments: true
