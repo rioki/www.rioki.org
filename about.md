@@ -51,10 +51,10 @@ I got employed by Siemens in April 2009 and continued working on SIAMTIC
 PDM. I specialized on compiler and virtual machine construction, 
 especially for the EDDL. SIMATIC PDM finally shipped in the end of 2010. 
 After internal reshuffling of people I ended up working on WinCC V11 for 
-the TIA Portal. Origin of the Name Rioki 
+the TIA Portal.
 
-Rio-Oh-Ki 
---------- 
+Origin of the Name Rioki 
+------------------------
 
 <img src="/images/ryoohki.png" alt="Rio-Oh-Ki" align="right" />
 
