@@ -34,7 +34,7 @@ the "[Bundesanstalt für Wasserbau][3]" (Federal Waterway Engineering and
 Research Institute). There I worked on different projects. I stated 
 administrating a high performance cluster, that was used for Fluid 
 Computational Dynamics (CFD). I finally worked on a chain of tools based 
-abound the extension of [NaSt3DGPF][4], a CFD solver. For my Diploma Thesis I 
+abound the extension of [NaSt3DGPF][4], a CFD solver. For my [Diploma Thesis][dip] I 
 wrote a fully fledged graphical editor, that was used to create CFD 
 models for NaSt3DGPF. 
 
@@ -76,3 +76,4 @@ the space ship form on demand; when ever need arises...
 [6]: http://www.siemens.de
 [7]: https://www.automation.siemens.com/mcms/process-control-systems/en/distributed-control-system-simatic-pcs-7/simatic-pcs-7-system-components/engineering-system/pages/process-device-manager-pdm.aspx
 [8]: http://www.industry.siemens.com/topics/global/en/tia-portal/pages/default.aspx
+[dip]: /files/Sean_Darrell_Diploma_Thesis.pdf
