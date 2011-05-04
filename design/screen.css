@@ -64,6 +64,10 @@ a {
 	clear: both;
 }
 
+h1, h2, h3, h4 {
+    text-align: left;
+}
+
 /* Post Special Formating */
 
 .post_date {
