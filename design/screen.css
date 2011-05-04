@@ -22,6 +22,14 @@ a {
     color: #ff5f0d;
 }
 
+h1, h2, h3, h4 {
+    text-align: left;
+}
+
+img {
+    border-width: 0;
+}
+
 /* Basic Layout */
 
 #page {
@@ -62,10 +70,6 @@ a {
     font-size: 75%;
     color: gray;
 	clear: both;
-}
-
-h1, h2, h3, h4 {
-    text-align: left;
 }
 
 /* Post Special Formating */
