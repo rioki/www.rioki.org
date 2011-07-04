@@ -8,6 +8,8 @@ that takes a class `Canvas` as reference. It is the task to draw the screen
 and each widget onto the canvas. The basic algorithm is stupidly simple, do some
 setup for the screen and call draw with the canvas for each widget.
 
+<!--more-->
+
 If you are using a `std::vector` you can use a simple for loop:
 
     Screen::draw(Canvas& canvas) const

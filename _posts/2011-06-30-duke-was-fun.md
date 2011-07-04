@@ -13,6 +13,8 @@ game was fun!
 
 <img src="http://www.dukenukemforever.com/html/us/media/img/screen_06.jpg" />
 
+<!--more-->
+
 I assume that there are very few people that where able to keep 
 their hopes high for the duration of all 12 years. For me, I 
 basically assumed they kept the thing going as a publicity 

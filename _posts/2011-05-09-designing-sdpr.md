@@ -13,6 +13,8 @@ with a special field on the packets returning and let's the application decide
 what to do. The appeal in this solution is the simplicity. But he fails to 
 address some core issues that I want my networking system [spdr][3] to solve for me. 
 
+<!--more-->
+
 The first issue is how connections are established. The given approach fails to give 
 any reason why a connection could not be established. The application can't 
 distinguish between a protocol version mismatch and an incorrect address. In 

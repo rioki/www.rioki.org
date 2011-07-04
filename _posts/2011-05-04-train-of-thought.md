@@ -13,6 +13,8 @@ Lately I have so little motivation when I am home. Even though I come up with
 ideas at work, I am almost incompetent to implement them back home. As a 
 result sdpr has not changed since the week end.
 
+<!--more-->
+
 I stated to play Crisis 2 and was interrupted after the first 5 minutes. I am
 not sure if I even want to continue. I thought that a game should grab you in 
 the first 5 minutes... Oh well. 

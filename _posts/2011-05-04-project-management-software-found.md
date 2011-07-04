@@ -13,6 +13,8 @@ completion tracking. I tried software that addressed different methodologies.
 Notable ones are dotProject, that adheres to the classical project management
 approach, to AgileTrack, that tries to bring tooling to XP or Scrum projects.
 
+<!--more-->
+
 My biggest problem with these methodologies are that they assume you basically 
 know what you want to do. For my hobby projects this tends not to be well
 set and change radically. Classical Project management falls totally flat with

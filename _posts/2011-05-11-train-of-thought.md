@@ -10,6 +10,8 @@ As comparison, that platform scored an average frame rate of 50 on the
 Half-Life 2: The Last Cost benchmark. It definitely does not help that it is 
 written in java...
 
+<!--more-->
+
 I registered for the Junien this week end.
 
 Tilt.
