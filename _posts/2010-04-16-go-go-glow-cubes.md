@@ -17,6 +17,8 @@ Quick Game Library at the same time and build in on top of that. I went
 though different complete redesigns, since the requirements seemed to 
 change and the scope changed. 
 
+<!--more-->
+
 I planed to build a game called GlowCubes about a year ago. It basically 
 spun of while reading this article about <a 
 href="http://www.gamedev.net/reference/programming/features/imgSpaceLigh 

@@ -11,6 +11,8 @@ A long long time ago in on a website far far away I read the post
 made me start to think about cloud based hosting for my website; especially 
 since I am hopping that my hobby work on games will start to turn around.
 
+<!--more-->
+
 The basic gist of the post is that [Wolfire Games][2] occasionally are being 
 slashdotted or digged (featured on Slashdot or Digg) and then the site better 
 not be down for the astronomical load. The important part to remember here is
