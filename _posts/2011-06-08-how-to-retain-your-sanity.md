@@ -10,6 +10,8 @@ These where small functions that served the sole process of retaining my own san
 After feeling the need to use these functions in two of my free software projects, 
 I decided to encapsulate them in a small library called [sanity][1].
 
+<!--more-->
+
 These functions come in two flavors, trace functions and check functions. 
 
 The trace functions are quite simple. The actual function is masqueraded by a macro 

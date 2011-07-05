@@ -11,6 +11,10 @@ original Duke Nukem 3D. But I tend to disagree and I think
 they kind of miss the point. Sure the game is not perfect, but the 
 game was fun!
 
+<img src="http://www.dukenukemforever.com/html/us/media/img/screen_06.jpg" />
+
+<!--more-->
+
 I assume that there are very few people that where able to keep 
 their hopes high for the duration of all 12 years. For me, I 
 basically assumed they kept the thing going as a publicity 
@@ -35,6 +39,8 @@ ammo, the high number of relative simple enemies and the
 relative complex timed boss fights really where timed and 
 executed in a manner that was just plain fun. 
 
+<img src="http://www.dukenukemforever.com/html/us/media/img/screen_02.jpg" />
+
 Many have said that games have evolved since the conception
 of Duke Nukem Forever and the game was just not up to par. 
 But in my opinion those few things that followed the common
@@ -58,6 +64,8 @@ a guess of what is to come next and chose my weapon, I want
 to have the choice in the encounter. This lead to the 
 weird situation that the RPG just happens to lie around
 when the next boss was up to come.
+
+<img src="http://www.dukenukemforever.com/html/us/media/img/screen_07.jpg" />
 
 With health regeneration, I was not sure if that actually
 made the game harder or simpler. Sure you could just

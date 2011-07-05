@@ -10,6 +10,8 @@ has the locale setting to German, since I have many contact points that
 need to conform to that, especially the default currency being Euros. Nevertheless 
 my interface language is English.
 
+<!--more-->
+
 I wrote a sort program to check what ANSI C things my locale settings are. 
 It looks like this:
 
