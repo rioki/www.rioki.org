@@ -10,8 +10,8 @@ in their work.
 
 I recently read a [not so good][1] opinion on the subject. The line that most 
 struck me was when it mockingly states that the original Unix developers 
-did not do code reviews. But to me, the bold statement "We where not bad 
-programmers" rings so true. I have seen great developers produce great code 
+did not do code reviews. But to me, the bold statement "We were all pretty good coders." 
+rings so true. I have seen great developers produce great code 
 that no amount of code review could make better. But there must be some truth 
 to all those quality improving precipices handed to us over the decades? 
 
@@ -43,16 +43,22 @@ skill and build (or destroy) trust in what he does.
 It has become a industry wide trend to review every line of code that gets into
 the code base, preferably before committing the changes. I think that this 
 practice is a waste of time (and thus money) and misses the point. The code 
-review tries to serve as quality gates that weed out bad code. But the real 
+review tries to serve as quality gate that weed out bad code. But the real 
 issue is that bad code was written in the first place. The real problem is
 that many companies employ novice to medium programmers without really knowing
-it. This mentality that monkeys with IDEs will create great great software, 
+it. This mentality that monkeys with IDEs will create great software, 
 if only the process is right is complete and utter nonsense. Especially, 
 since they follow the reasoning that two monkeys doing code review will improve 
-their code. It only works if an experienced developer looks over the code of a 
-novice developer to find any issues or a novice developer to look over 
-the code of an experienced one to facilitate learning.   
+their code. Bannana! 
 
-[1]: ...
-[2]: ...
+Code reviews only work in two situations: Either an experienced developer looks
+over the code of a novice developer to find any deficiencies or the
+novice developer looking over the code of an experienced developer to learn 
+style and tricks. 
+
+Code reviews have their place in a developers toolbox. But it would rather help
+if companies would focus more on talent and less on process. 
+
+[1]: http://blogs.sas.com/sasdummy/index.php?/archives/264-Are-you-too-good-for-code-reviews.html
+[2]: http://scientopia.org/blogs/goodmath/2011/07/06/things-everyone-should-do-code-review/
 
