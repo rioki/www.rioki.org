@@ -60,7 +60,7 @@ img {
 }
 
 #content img {
-    margin: 5px;
+    margin: 5px auto;
 }
 
 #footer {
