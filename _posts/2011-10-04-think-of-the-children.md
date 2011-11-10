@@ -41,7 +41,7 @@ format.
 
 <img src="/images/Dead_island_hotel_bungalow_15_teddy_bear.jpg" width="640" />
 
-But there is one huge elegant in the room, you just can't ignore. There are 
+But there is one huge elephant in the room, you just can't ignore. There are 
 no children in Dead Island! If you look between the lines, you can see that 
 children where planed and either where taken out or never implemented. In three
 cases children are referenced. The audio sample clearly belongs to a child, but
