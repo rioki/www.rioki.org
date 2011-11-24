@@ -87,3 +87,7 @@ img {
     -khtml-border-radius: 10px;
     border-radius: 10px;
 }
+
+.social_buttons {
+    text-align: right;
+}
