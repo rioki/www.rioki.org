@@ -3,7 +3,7 @@ title: Fiddler vs. ISA-Server
 layout: post
 ---
 
-I recently looked into [Rubly on Rails][1] to see what the hype is or rather
+I recently looked into [Ruby on Rails][1] to see what the hype is or rather
 was about. I even found a [niffty introduction][2] to the subject and found along
 the way the nifty little language ruby. I probably will [not use it for any 
 serious projects][3], but it is nice to know I have a new tool in my tool belt.
