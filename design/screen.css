@@ -38,11 +38,17 @@ img {
 }
 
 #header {
-    height: 100px;    
+    height: 100px; 
+    clear: both;    
 }
 
 #site_title {
     float: left;
+}
+
+#social {
+    clear: both;
+    text-align: right;
 }
 
 #topmenu {
@@ -57,6 +63,7 @@ img {
 
 #content {
     text-align: justify;
+    clear: both;
 }
 
 #content img {
