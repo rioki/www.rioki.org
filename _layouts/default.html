@@ -16,7 +16,16 @@
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-        </script>        
+        </script>   
+        <!-- SOPA Strike Code -->
+        <script type="text/javascript">
+            var a = new Date, b = a.getUTCHours();
+            if (   0 == a.getUTCMonth() && 2012 == a.getUTCFullYear() && 
+                ((18 == a.getUTCDate() && 13 <= b) || 19 == a.getUTCDate() && 0 >= b))) 
+            {
+                window.location="http://www.rioki.org/sopastrike.html";
+            }
+            </script>        
     </head>
     <body>
         <div id="page">
