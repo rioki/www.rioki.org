@@ -37,6 +37,26 @@ formulate queries that do not reference nodes, such as functions like "count(boo
 [libxml2]: http://xmlsoft.org
 [libxmlmm]: http://www.github.com/rioki/libxmlmm
 
+## mathex
+
+After writing linear algebra classes for the thrid time, I decided to refactor
+them out. Thus came the library [mathex] into life. It's not perfect, not 
+the most performant thing, but I just love the interface.
+
+[mathex]: https://github.com/rioki/mathex
+
+## sanity
+
+For some reason or other I constanty wrote trace and check functions. Finally
+I decided to refactor them into a small library for exactly these purposes, 
+called [sanity].
+
+If you wonder how to use the library, you may want to read 
+[How to retain your sanity]
+
+[sanity]: https://github.com/rioki/sanity
+[How to retain your sanity]: /2011/06/08/how-to-retain-your-sanity.html
+
 ## rioki@github
 
 I am mainly using [github][gh] for my hobby programming. Not each project there
