@@ -7,11 +7,12 @@ For the content of this website is legally responsible:
     Sean Farrell
     Durlacher Allee 35
     76131 Karlsruhe
+	Germany
     
 If you want to contact me via email, email me at [sean.farrell@rioki.org][6].
 
 All material on this site unless otherwise stated is copyright 
-&copy; 2009-2011 Sean Farrell. 
+&copy; 2009-2012 Sean Farrell. 
 
 The web design uses the [Deja Vu][1] Sans Extra Light font. The font was 
 converted to formats for browsers using the [@font-face Kit Generator][2] by 
