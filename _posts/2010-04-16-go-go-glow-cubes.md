@@ -35,8 +35,7 @@ Quick Game Library at the same time and build in on top of that. I went
 though different complete redesigns, since the requirements seemed to 
 change and the scope changed. 
 
-After seeing the incredible <a 
-href="http://www.gamedev.net/community/forums/topic.asp?topic_id=567550" >Imagine</a> 
+After seeing the incredible <a href="http://vimeo.com/10670506" >Imagine</a> 
 48k demo by <a href="http://games-net.de/hosted/tggc/">TGGC</a>, 
 <a href="http://alphanew.net/">CodingCat</a> and 
 <a href="http://blu-flame.org/">Hel</a>. (Music by Turri), I kind of 
