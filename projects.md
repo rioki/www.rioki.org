@@ -57,6 +57,15 @@ If you wonder how to use the library, you may want to read
 [sanity]: https://github.com/rioki/sanity
 [How to retain your sanity]: /2011/06/08/how-to-retain-your-sanity.html
 
+## DCPU-16 Assembler and Simulator
+
+I implemented an [assembler and simulator for the DCPU-16][d16] from the game
+[0x10c]. The birth of the project is outlined in the [post from 2012-04-08][d16p]. 
+
+[d16]: http://github.com/rioki/d16
+[0x10c]: http://0x10c.com
+[d16p]: /2012/04/08/dcpu-16-assembler-and-simulator.html
+
 ## rioki@github
 
 I am mainly using [github][gh] for my hobby programming. Not each project there
