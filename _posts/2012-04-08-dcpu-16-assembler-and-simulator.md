@@ -151,6 +151,8 @@ As I am writing this I notice that I did not implement the O register. There
 are probably more things I did not do right, so effort should be invested in
 validating and proofing the code.
 
+*Update: Now I properly implemented the O register.*
+
 ### High Level Language
 
 The next thing that must be done for the DCPU-16 is develop a high level 
