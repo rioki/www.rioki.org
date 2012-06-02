@@ -30,6 +30,16 @@ img {
     border-width: 0;
 }
 
+pre {
+    background-color: silver;
+    margin: 10px;
+    padding: 15px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+
 /* Basic Layout */
 
 #page {
