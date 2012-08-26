@@ -28,4 +28,4 @@ This website was generated with [Jekyll][5].
 [3]: http://www.fontsquirrel.com
 [4]: http://pokemopolis.net
 [5]: https://github.com/mojombo/jekyll
-[6]: sean.farrell@rioki.org
+[6]: mailto:sean.farrell@rioki.org
