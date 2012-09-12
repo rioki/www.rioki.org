@@ -10,7 +10,7 @@ to the last version and pat myself on the back. This worked like a charm,
 until I got sick last week. This is just a hobby so no big deal, but it made 
 me think about the "modern" planing methods. 
 
-In my organisational unit at Siemens, we are trying to "agile up" out development
+In my organisational unit at Siemens, we are trying to "agile up" our development
 process. It is done under the banner Lean, but it is the same critter, with a
 different fur color. We now have User Stories here, Iterations there and Kanban
 everywhere. To a certain degree I am really happy that we are removing (some)
@@ -56,7 +56,7 @@ report that undo does not work while testing the first iteration.
 
 The reduction in user story size has only one goal, better planing capability. 
 If you plan 3 x 2 weeks you can see that the schedule slips after the first two 
-weeks. Which would not not be such a big deal, your velocity / burn rate / 
+weeks. Which would not be such a big deal, your velocity / burn rate / 
 whatever could improve over the course of development (or not). But now
 the iteration plan is crammed with <del>features</del> user stories and some 
 bean counter can tell that you will not make the final ship date. 
@@ -70,7 +70,7 @@ need to stick to it. Every iteration can potentially go into crunch mode.
 
 But it gets even more weird when things, such as summer or Christmas don't get 
 integrated into the plan. *Who would have thought that the half the development
-team takes off in august?* 
+team takes off in August?* 
 
 The original proponents of agile development did not fix a release date, they 
 released the software **every iteration**. But you can still estimate relatively
