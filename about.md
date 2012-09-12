@@ -51,7 +51,12 @@ I got employed by Siemens in April 2009 and continued working on SIAMTIC
 PDM. I specialized on compiler and virtual machine construction, 
 especially for the EDDL. SIMATIC PDM finally shipped in the end of 2010. 
 After internal reshuffling of people I ended up working on WinCC V11 for 
-the [TIA Portal][8].
+the [TIA Portal][8]. 
+
+After compleating the V11 and V12 versions of the TIA-Portal I joined 
+development of the [PCS7 CFC Editor][psc7_es] in mid 2012, where I am working on the 
+CFC compiler. I am currently working on a feature for the 8.1 version, 
+which I can't talk about yet.
 
 Origin of the Name Rioki 
 ------------------------
@@ -77,3 +82,4 @@ the space ship form on demand; when ever need arises...
 [7]: https://www.automation.siemens.com/mcms/process-control-systems/en/distributed-control-system-simatic-pcs-7/simatic-pcs-7-system-components/engineering-system/pages/process-device-manager-pdm.aspx
 [8]: http://www.industry.siemens.com/topics/global/en/tia-portal/pages/default.aspx
 [dip]: /files/Sean_Farrell_Diploma_Thesis.pdf
+[psc7_es]: http://www.automation.siemens.com/mcms/process-control-systems/en/distributed-control-system-simatic-pcs-7/simatic-pcs-7-system-components/engineering-system/Pages/engineering-system.aspx
