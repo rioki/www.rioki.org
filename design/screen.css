@@ -78,6 +78,7 @@ pre {
 
 #content img {
     margin: 5px;
+    max-width: 640px;
 }
 
 #footer {
