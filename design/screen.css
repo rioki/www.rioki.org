@@ -14,6 +14,8 @@
 
 body {
     font-family: 'DejaVuSansExtraLight', sans-serif;
+    width: 640px;
+    margin: 0 auto;
 }
 
 a {
@@ -42,12 +44,7 @@ pre {
 
 /* Basic Layout */
 
-#page {
-    width: 640px;
-    margin: 0 auto;
-}
-
-#header {
+header {
     height: 100px; 
     clear: both;    
 }
@@ -61,27 +58,27 @@ pre {
     text-align: right;
 }
 
-#topmenu {
+nav {
     float: right;
     margin: 25px 0;
 }
 
-#topmenu a {
+nav a {
     font-weight: normal;
     font-size: 175%;
 }
 
-#content {
+article {
     text-align: justify;
     clear: both;
 }
 
-#content img {
+article img {
     margin: 5px;
     max-width: 640px;
 }
 
-#footer {
+footer {
     margin-top: 10px;
     border-top: 1px solid silver;
     text-align: center;

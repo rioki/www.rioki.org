@@ -1,35 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>{{ page.title }} - {{ site.title }}</title>
-        <meta name="author" content="{{ site.author }}" />
-        <link rel="stylesheet" href="/design/screen.css" />
-        <link rel="alternate" type="application/atom+xml" title="Rioki's Corner Feed" href="/atom.xml" />
-    </head>
-    <body>
-        <div id="page">
-            <div id="social">
-              <span id="twitter"><a href="http://www.twitter.com/rioki1337"><img src="/design/twitter.png" alt="rioki@twitter." /></a></span>
-              <span id="github"><a href="http://www.github.com/rioki"><img src="/design/github.png" alt="rioki@github" /></a></span>
-              <span id="rss"><a href="/atom.xml"><img src="/design/rss.png" alt="atom feed" /></a></span>        
-            </div>
-            <div id="header">
-                <div id="site_title"><a href="/"><img src="/design/rioki.png" alt="Rioki" /></a></div>
-                <div id="topmenu">
-                    <a href="/journal.html">Journal</a>
-                    <a href="/projects.html">Projects</a>
-                    <a href="/about.html">About</a>
-                </div>
-            </div>
-            <div id="content">
-                <h1>{{ page.title }}</h1>
-                {{ content }}
-            </div>
-            <div id="footer">
-                &copy; 2009-2012 {{ site.author }} | 
-                <a href="/imprint.html">Imprint</a>
-            </div>
-        </div>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <meta name="author" content="{{ site.author }}" />
+    <link rel="stylesheet" href="/design/screen.css" />
+    <link rel="alternate" type="application/atom+xml" title="Rioki's Corner Feed" href="/atom.xml" />
+  </head>
+  <body>    
+    <div id="social">
+      <span id="twitter">
+        <a href="http://www.twitter.com/rioki1337">
+          <img src="/design/twitter.png" alt="rioki@twitter." />
+        </a>
+      </span>
+      <span id="github">
+        <a href="http://www.github.com/rioki">
+          <img src="/design/github.png" alt="rioki@github" />
+        </a>
+      </span>
+      <span id="rss">
+        <a href="/atom.xml">
+          <img src="/design/rss.png" alt="atom feed" />
+        </a>
+      </span>
+    </div>
+    <header>
+      <div id="site_title">
+        <a href="/">
+          <img src="/design/rioki.png" alt="Rioki" />
+        </a>
+      </div>
+      <nav>
+        <a href="/journal.html">Journal</a>
+        <a href="/projects.html">Projects</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </header>
+    <article>
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+    </article>
+    <footer>
+      &#169; 2009-2012 {{ site.author }} | 
+      <a href="/imprint.html">Imprint</a>
+    </footer>    
+  </body>
 </html>
