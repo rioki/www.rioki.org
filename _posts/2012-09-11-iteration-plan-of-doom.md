@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Iteration Plan of Doom"
+tags:
+    - management
+    - rant
 ---
 
 On my "serious" hobby projects I try to keep a two week iteration going. Up 

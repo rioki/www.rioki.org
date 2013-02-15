@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Code Reviews"
+tags:
+    - coding
+    - quality
 ---
 
 I will take a bold stance, experienced and dedicated programmers do not need 

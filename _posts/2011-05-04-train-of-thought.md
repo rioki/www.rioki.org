@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Train of Though"
+tags:
+    - train
 ---
 
 *I was sitting in the train this morning and did not know what to do. I started

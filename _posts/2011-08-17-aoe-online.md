@@ -1,6 +1,10 @@
 ---
 layout: post
 title: "Age of Empires Online"
+tags:
+    - review
+    - games 
+    - rant
 ---
 It totally passes by me that Microsoft had developed a new Age of Empires 
 title, but a colleague of mine told me. I kind of though that the Age of Empires

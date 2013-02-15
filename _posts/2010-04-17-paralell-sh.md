@@ -1,6 +1,9 @@
 ---
 layout: post
 title:  "Porting parallel.sh to MSys"
+tags:
+    - coding
+    - bash
 ---
 
 Ever wanted to process many files but your program is single threaded 

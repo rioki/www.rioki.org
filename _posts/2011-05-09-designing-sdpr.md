@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Designing spdr"
+tags:
+    - spdr
+    - coding
 ---
 
 While researching different solutions for networking games, I stumbled over

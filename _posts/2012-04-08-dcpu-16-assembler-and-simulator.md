@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "DCPU-16 Simulator and Assembler"
+tags:
+    - dcpu16
 ---
 
 So [Notch] is launching a new game called [0x10c] and it is a space exploration 

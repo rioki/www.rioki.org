@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Solid Shelved - For Now"
+tags:
+    - solid
+    - fail
 ---
 
 These last two weeks had it's ups and downs. I learned allot about my engine

@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "New Ideas and the Hinterland Of Fail"
+tags:
+    - meta
+    - link
 ---
 
 I just read a great blog post on why innovation is hard and error prone. 

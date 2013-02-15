@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Eliminate Waste"
+tags:
+    - management
 ---
 
 At [Siemens], specifically in the research and development of the [Automation 

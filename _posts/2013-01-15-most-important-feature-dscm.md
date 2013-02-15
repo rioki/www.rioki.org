@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "The Most Important Feature of DSCM"
+tags:
+    - scm
 ---
 
 Distributed Source Code Management (DSCM), such as [git] or [mercurial] have 

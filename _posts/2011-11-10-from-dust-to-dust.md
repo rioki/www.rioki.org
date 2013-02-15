@@ -1,6 +1,9 @@
 ---
 title: From Dust to Dust
 layout: post
+tags:
+    - review
+    - games
 ---
 
 Nice tech demo, where is the game? 

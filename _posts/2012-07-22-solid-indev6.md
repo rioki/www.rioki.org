@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Solid InDev6"
+tags:
+    - solid
+    - release
 ---
 
 This development has a rather tragic story. To illustrate that tragedy, coming

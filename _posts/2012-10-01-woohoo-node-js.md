@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Woohooo! Node.js!"
+tags:
+    - nodejs
 ---
 
 This is odd, I have not been **so exited** about learning a new technology,

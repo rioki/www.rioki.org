@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Passphrases are Stronger then Passwords."
+tags:
+    - securtiy
 ---
 
 What is a good password? We all know the answer to this question. A good and 

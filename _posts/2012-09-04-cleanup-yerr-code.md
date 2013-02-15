@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Cleanup Yerr Code"
+tags:
+    - coding
+    - uncrustify
 ---
 
 I have been given a body of code that is old. The copyright notice says 1995 and

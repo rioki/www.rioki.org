@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Ruthless Automation"
+tags:
+    - nodejs
 ---
 I have a special problem. The software I am working on at Siemens uses 
 Visual Studio 6. You would think that Visual Studio 6 would have been fazed

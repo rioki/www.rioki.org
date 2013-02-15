@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Train of Thought"
+tags:
+    - train
 ---
 
 Minecraft sux! Ok, actually the game rocks, the problem is the software. I

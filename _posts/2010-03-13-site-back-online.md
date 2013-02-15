@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Site Back Online"
+tags:
+    - meta
 ---
 After some downtime the site is back online, but content is still 
 missing in many places. 

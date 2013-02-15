@@ -1,6 +1,9 @@
 ---
 title: "What no start menu?!"
 layout: post
+tags:
+    - rant
+    - win8
 ---
 
 With a big bang, the news hit home [Microsoft killed the start menu][1]. Ok the

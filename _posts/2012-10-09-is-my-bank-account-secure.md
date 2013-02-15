@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Is my Bank Account Secure?"
+tags:
+    - security
 ---
 It is now starting to become common knowlage that, [the longer your password
 is][1] the [harder it is to crack][2]. This has mostly to do with the fact that

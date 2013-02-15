@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Duke was fun..." 
+tags:
+    - review
+    - games
 ---
 
 Everybody agrees, Duke Nukem Forever got really bad reviews. You can

@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Solid InDev3"
+tags:
+    - solid
+    - release
 ---
 
 Yet a timly development snapshot for Solid. I present you development snapshot

@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Solid InDev2"
+tags:
+    - solid
+    - release
 ---
 
 Wow, I made it! The next development snapshot of Solid is here! I can't believe

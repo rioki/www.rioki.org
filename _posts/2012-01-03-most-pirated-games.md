@@ -1,6 +1,8 @@
 ---
 title: Most Pirated Games
 layout: post
+tags:
+    - piracy
 ---
 
 The Escapist recently [reported][1] on the Torrent Freak's [latest numbers on piracy][2]. 

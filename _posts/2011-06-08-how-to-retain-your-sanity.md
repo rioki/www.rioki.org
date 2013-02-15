@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "How to retain your sanity"
+tags:
+    - sanity
+    - coding
 ---
 
 ... while writing software. 

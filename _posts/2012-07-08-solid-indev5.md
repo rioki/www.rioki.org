@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Solid InDev5"
+tags:
+    - solid
+    - release
 ---
 
 For this development snapshot of Solid I concentrated on improving the 

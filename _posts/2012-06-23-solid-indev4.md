@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Solid InDev4"
+tags:
+    - solid
+    - release
 ---
 
 Here is the biweekly release of the development snapshot of the game Solid. 

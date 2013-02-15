@@ -1,6 +1,10 @@
 ---
 layout: post
 title: "Ultimate C++ Library Makefile"
+tags:
+    - building
+    - make
+    - gist
 ---
 
 

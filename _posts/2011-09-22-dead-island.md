@@ -1,6 +1,9 @@
 ---
 title: Dead Island
 layout: post
+tags:
+    - review
+    - games
 ---
 
 [Dead Island][di] was one of the games that I really was looking up to. It all started

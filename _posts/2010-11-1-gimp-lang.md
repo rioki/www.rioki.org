@@ -1,6 +1,10 @@
 ---
 layout: post
 title: "Fixing Gimp and Language Settings"
+tags:
+    - gimp
+    - i18n
+    - h4x
 ---
 Ever used Gimp or any other tool that uses gettext for localization on 
 Windows and the language does not turn out as it should?

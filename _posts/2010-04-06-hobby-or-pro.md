@@ -1,6 +1,10 @@
 ---
 layout: post
 title: "Hobby or Pro"
+tags:
+    - meta
+    - coding
+    - project
 ---
 
 Over the last 3 years I tried to develop a number of game projects with 

@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Make mine Jekyll"
+tags:
+    - jekyll
+    - meta
 ---
 
 This site recently took a new turn technologically wise. I migrated it to Jekyll

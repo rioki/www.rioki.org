@@ -1,0 +1,20 @@
+---
+layout: default
+---
+{% for post in site.posts %}
+  {% for tag in post.tags %}
+    {% if tag == page.tag %}
+      <h2><a href="{{ post.url }}">{{post.title}}</a></h2>
+      <div class="post_tags">
+        {% for tag in post.tags %}
+          <a href="/tag/{{tag}}.html">{{tag}}</a>
+        {% endfor %}
+      </div>
+      <div class="post_date">{{ post.date | date_to_string }}</div>
+      <div class="post_content">
+        {{ post.content | summarize }}
+        <a href="{{ post.url }}">read more</a>
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endfor %}

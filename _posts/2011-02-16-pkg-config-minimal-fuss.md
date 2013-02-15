@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "pkg-config for MSys with Minimal Fuss"
+tags:
+    - building
 ---
 
 [pkg-config][1] is a

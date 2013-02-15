@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Working Around Jekyll's Safe Mode"
+tags:
+    - jekyll
+    - github
 ---
 
 [github][gh] has this nifty service [github pages][ghp] and under the hood

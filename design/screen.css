@@ -104,6 +104,12 @@ footer {
     border-radius: 10px;
 }
 
+.post_tags {
+    clear: both;
+    text-align: right;
+    margin: 0;
+}
+
 .social_buttons {
     text-align: right;
 }

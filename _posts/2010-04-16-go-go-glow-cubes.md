@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Go! Go! Glow Cubes!"
+tags:
+    - glowcubes
+    - project
 ---
 
 I planed to build a game called GlowCubes about a year ago. It basically 

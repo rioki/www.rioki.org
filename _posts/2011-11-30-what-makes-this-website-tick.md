@@ -1,6 +1,9 @@
 ---
 title: What makes this Website Tick
 layout: post
+tags:
+    - meta
+    - jekyll
 ---
 
 This website is generated with [jekyll][1] and hosted on [Amazon S3][2] but how

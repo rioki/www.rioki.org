@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "R-Value References"
+tags:
+    - cpp
+    - coding
 ---
 
 The new C++ standard C++11 brought many new and interesting features. Recently

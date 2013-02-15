@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Experimenting with GYP"
+tags: 
+    - gyp
+    - building
 ---
 
 I am working again on a game project, think [solid] only better. My development 

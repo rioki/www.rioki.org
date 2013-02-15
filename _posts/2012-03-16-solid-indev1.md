@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Solid InDev1"
+tags:
+    - solid
+    - release
 ---
 
 Remember [Glow Cubes][gc], probably not since I don't have that many recuring

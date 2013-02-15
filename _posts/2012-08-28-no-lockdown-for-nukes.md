@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "No Lock Down for Nukes"
+tags:
+    - security
 ---
 
 I recently have seen a very good presentation by Cory Doctorow, 

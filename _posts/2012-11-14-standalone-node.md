@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Making Standalone Programs with Node.js"
+tags:
+    - nodejs
 ---
 I think I already [raved][1] about how cool node.js is and it totally makes
 sense to build small utility applications with it. But I had trouble to 

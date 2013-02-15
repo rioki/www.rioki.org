@@ -1,6 +1,9 @@
 ---
 title: "Someone Think of the Children!"
 layout: post
+tags: 
+    - games
+    - rant
 ---
 
 [Dead Island][1] had allot going for it. The cinematic announce trailer is one of 

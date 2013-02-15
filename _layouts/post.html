@@ -1,6 +1,13 @@
 ---
 layout: default
 ---
+<div class="tags">
+  Tags 
+  {% for tag in page.tags %}
+    <a href="/tag/{{tag}}.html">{{tag}}</a>
+  {% endfor %}
+</div>
+
 {{ content }}
 
 <aside>

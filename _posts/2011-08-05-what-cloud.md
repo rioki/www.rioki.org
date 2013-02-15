@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "What Cloud?"
+tags: 
+    - cloud
+    - rant
 ---
 
 Cloud computing is now becoming mainstream. But what is cloud computing? 

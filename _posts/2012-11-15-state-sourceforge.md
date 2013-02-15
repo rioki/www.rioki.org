@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "The State of SourceForge"
+tags:
+    - rant
+    - sourceforge
 ---
 
 Where would the free software movement be without [SourceForge]? SourceForge

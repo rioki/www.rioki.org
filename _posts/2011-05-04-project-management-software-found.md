@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Project Management Software Found"
+tags:
+    - management
 ---
 
 I have been looking for a suitable project management software for my hobby 

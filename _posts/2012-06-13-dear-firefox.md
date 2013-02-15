@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Dear Firefox,"
+tags:
+    - rant
+    - firefox
 ---
 
 it has been a very long time that we where together. I remember the 2.0 times

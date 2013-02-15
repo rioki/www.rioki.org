@@ -1,6 +1,9 @@
 ---
 title: Fiddler vs. ISA-Server
 layout: post
+tags:
+    - network
+    - fiddler
 ---
 
 I recently looked into [Ruby on Rails][1] to see what the hype is or rather

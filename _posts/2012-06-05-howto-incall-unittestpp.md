@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "How To Install UnitTest++"
+tags:
+    - coding
+    - unittest
 ---
 
 In my opingion [UnitTest++] is the most awsome unit testing framework for

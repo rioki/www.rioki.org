@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Glow Cubes Demo Deferred"
+tags:
+    - glowcubes
+    - fail
 ---
 
 During these past two weeks, I was taxed to much by my day job. 

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Solving the Reference to Reference Problem with std::bind"
+tags:
+    - coding
 ---
 Now let's pretend you have a class called `Screen` and a few classes that 
 are derived from a class called `Widget`. Each have a method called `draw`
