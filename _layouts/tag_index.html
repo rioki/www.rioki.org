@@ -12,7 +12,7 @@ layout: default
       </div>
       <div class="post_date">{{ post.date | date_to_string }}</div>
       <div class="post_content">
-        {{ post.content | summarize }}
+        {{ post.content | markdownify  | summarize }}
         <a href="{{ post.url }}">read more</a>
       </div>
     {% endif %}
