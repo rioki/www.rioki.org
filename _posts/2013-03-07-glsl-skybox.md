@@ -105,18 +105,18 @@ from the camera to the fragment, is exactly this vector.
 
 So here we are, the [vertex shader][9]:
 
-void main()
-{
-    mat4 r = gl_ModelViewMatrix;
-    r[3][0] = 0.0;
-    r[3][1] = 0.0;
-    r[3][2] = 0.0;
-    
-    vec4 v = inverse(r) * inverse(gl_ProjectionMatrix) * gl_Vertex;
+    void main()
+    {
+        mat4 r = gl_ModelViewMatrix;
+        r[3][0] = 0.0;
+        r[3][1] = 0.0;
+        r[3][2] = 0.0;
+        
+        vec4 v = inverse(r) * inverse(gl_ProjectionMatrix) * gl_Vertex;
 
-    gl_TexCoord[0] = v; 
-    gl_Position    = gl_Vertex;
-}
+        gl_TexCoord[0] = v; 
+        gl_Position    = gl_Vertex;
+    }
 
 As I said above the texture coordinate is the vector from the camera to the 
 fragment. For efficiency we compute it for the vertex and use openGL's 
