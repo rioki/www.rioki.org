@@ -1,7 +1,7 @@
 box: wercker/ruby
 build:
   steps:
-    - bundle-install
+    - wercker/bundle-install@0.9.4
     - script:
         name: generate site
         code: bundle exec jekyll build --trace
