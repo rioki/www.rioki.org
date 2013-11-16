@@ -6,4 +6,4 @@ markdown: maruku
 lsi:      false
 pygments: true
 future:   false
-exclude:  [Gemfile, Gemfile.lock]
+exclude:  [Gemfile, Gemfile.lock, wercker.yml]
