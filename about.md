@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: page
 title: About
+nav: about
 ---
 
 Behind the pseudonym rioki is Sean Farrell. 

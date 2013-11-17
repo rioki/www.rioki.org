@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: page
 title: Projects
+nav: projects
 ---
 
 ## libxmlmm

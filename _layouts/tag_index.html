@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<article>
 {% for post in site.posts %}
   {% for tag in post.tags %}
     {% if tag == page.tag %}
@@ -18,3 +19,4 @@ layout: default
     {% endif %}
   {% endfor %}
 {% endfor %}
+</article>
