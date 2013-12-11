@@ -2,7 +2,7 @@ title:    "Rioki's Corner"
 url:      http://www.rioki.org
 author:   Sean Farrell
 email:    sean.farrell@rioki.org
-markdown: maruku
+markdown: kramdown
 lsi:      false
 pygments: true
 future:   false
