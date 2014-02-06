@@ -26,6 +26,8 @@ and definitely quite computationally expensive.
 But if you remember what the transformation matrix contains and how you compute
 a view matrix through the look at function. You will see an interesting correlation. 
 
+<!--more-->
+
 The important thing to remember is that the transformation matrix is an 
 orthonormal basis with a position slapped on.
 
