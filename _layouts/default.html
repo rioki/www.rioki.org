@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} - {{ site.title }}</title>
     <meta name="author" content="{{ site.author }}" />
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/rioki.css" rel="stylesheet">
-    <link rel="alternate" type="application/atom+xml" title="Rioki's Corner Feed" href="/atom.xml" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet">    
+    <link href="/css/rioki.css" rel="stylesheet">    
+    <link rel="alternate" type="application/atom+xml" title="Rioki's Corner Feed" href="/atom.xml" />    
+    <!-- TODO change math config to rioki.org before upload -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,http://www.rioki.org/js/MathJaxLocal.js"></script>
   </head>
   <body> 
     <div class="container">
@@ -47,6 +49,6 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-    </script>
+    </script>        
   </body>
 </html>
