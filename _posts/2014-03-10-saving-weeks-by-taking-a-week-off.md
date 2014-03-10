@@ -14,7 +14,7 @@ that it would be a "lost" week, in the sense that I would not get anything done
 and it would push back my schedule by a week. So I planed the week with 0% 
 availability, in my [nifty planing tool][pt]. 
 
-<img src="/images/fernsehturm.png" class="img-responsive" alt="Fernsehturm" />
+<img src="/images/fernsehturm.jpg" class="img-responsive" alt="Fernsehturm" />
 
 I honestly wanted to take the week off, so the only electric device I packed 
 was my phone. On the train ride to Berlin, I decided to take it even a step 
@@ -30,7 +30,7 @@ Just thinking about either the imediate future or daydreaming really helped
 purge my mind. Towards the end of the week my thoughts slowly crept back towards
 my work.
 
-<img src="/images/bode-museum.png" class="img-responsive" alt="Bode Museum" />
+<img src="/images/bode-museum.jpg" class="img-responsive" alt="Bode Museum" />
 
 **Two things where suddenly clear, I want to finish this project and move on to 
 cooler more interesting ones and that I had started to gold plate.**
