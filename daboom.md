@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: "Da Boom!"
 nav: projects
 ---
