@@ -4,73 +4,68 @@ title: Projects
 nav: projects
 ---
 
-## libxmlmm
+Here are a few of my notable project I have built over time. You can
+find most of my work on [github](https://github.com/rioki)
 
-While developing applications with [gtkmm] I was introduced to the [libxml++], 
-which is a fine wrapper of the XML library [libxml2]. I was so fond of the library
-that I wanted to use it with other projects; especially ones that build on top
-of SDL and openGL. Unfortunately libxml++ uses Glib::ustring to handle the 
-UTF-8 strings with libxml2. Although the basic premise is reasonable, ensure that
-any string operations work with UTF-8, the resulting link and deployment dependencies
-do not. On top of the regular dependency to libxml2 and iconv, you also depend
-on glibmm, which in turn depends on glib, gobject and a few minor libraries 
-commonly found on Linux systems.
+## Game
 
-If you need the libraries all is nice and fine, but if you need half a dozen
-libraries, just for passing around UTF-8 strings, it is overkill. Especially,
-as it turns out, most if not all operations I needed was storing and passing
-the string around. I can't think of one case where I needed to do a string 
-operation on a value taken from the XML document.
+### DaBoom!
 
-After finding no solution that the maintainers of libxml++ where comfortable 
-with, I decided to roll my own library, thus [libxmlmm] was born. Since libxmlmm
-and libxml++ wrap the same C library, they have a few things in common, but 
-libxml++ does a few things differently. The basic DOM is mostly similar, but
-the accessors are refined. For example most of your operations involve elements,
-so most accessors have a version that handles elements; this makes the client
-code much cleaner, since you don't need to cast nodes to elements, where you
-know only a element can come out. The other big thing is that XQuery queries 
-can be used to set or get any value, not only nodes. This enables to 
-formulate queries that do not reference nodes, such as functions like "count(books)".
+Da Boom! is a classic bomb laying game. You can play it in local multiplay
+or over the net.
 
-[gtkmm]: http://www.gtkmm.org
-[libxml++]: http://libxmlplusplus.sourceforge.net/
-[libxml2]: http://xmlsoft.org
-[libxmlmm]: http://www.github.com/rioki/libxmlmm
+* [project page](/daboom.html)
 
-## mathex
+## Libraries
 
-After writing linear algebra classes for the thrid time, I decided to refactor
-them out. Thus came the library [mathex] into life. It's not perfect, not 
-the most performant thing, but I just love the interface.
+### pkzo
 
-[mathex]: https://github.com/rioki/mathex
+[pkzo](https://github.com/rioki/pkzo) is a comprehensive library aimed to 
+provide all needed tools to build the presentation layer of a game or 3D 
+application. This includes 3D rendering, 2D rendering, user interface, 
+sound and input. 
 
-## sanity
+* [github repository](https://github.com/rioki/pkzo)
 
-For some reason or other I constanty wrote trace and check functions. Finally
-I decided to refactor them into a small library for exactly these purposes, 
-called [sanity].
+### spdr
 
-If you wonder how to use the library, you may want to read 
-[How to retain your sanity]
+[spdr](https://github.com/rioki/spdr) tries to simplify network comunication
+to simply sending messages. 
 
-[sanity]: https://github.com/rioki/sanity
-[How to retain your sanity]: /2011/06/08/how-to-retain-your-sanity.html
+* [github repository](https://github.com/rioki/spdr)
 
-## DCPU-16 Assembler and Simulator
+### libxmlmm
 
-I implemented an [assembler and simulator for the DCPU-16][d16] from the game
-[0x10c]. The birth of the project is outlined in the [post from 2012-04-08][d16p]. 
+[libxmlmm](https://github.com/rioki/libxmlmm) is a C++ wrapper around 
+[libxml2](http://xmlsoft.org). It provides native support for XML parsing, 
+querying, manipulation and writing of XML with the help of a DOM.
 
-[d16]: http://github.com/rioki/d16
-[0x10c]: http://0x10c.com
-[d16p]: /2012/04/08/dcpu-16-assembler-and-simulator.html
+* [github repository](https://github.com/rioki/libxmlmm)
 
-## rioki@github
+### rjson
 
-I am mainly using [github][gh] for my hobby programming. Not each project there
-is worthwhile to mention, but you can all find them there.
+[rjson] is an facilitates reading and writing of JSON. The library tries to 
+be as simple as possible and so uses almost only standard components.
 
-[gh]: http://github.org/rioki
+* [github repository](https://github.com/rioki/rjson)
 
+### glm 
+
+[glm](https://github.com/rioki/glm) is a utility library that implements basic 
+math constructs compliant with GLSL's specification.
+
+* [github repository](https://github.com/rioki/glm)
+
+### rtest
+
+[rtest](https://github.com/rioki/rtest) is a minimalistic unit testing library.
+It's API is a subset of UnitTest++. 
+
+* [github repository](https://github.com/rioki/rtest)
+
+### sanity
+
+[sanity](https://github.com/rioki/sanity) is a utility library that implements
+basic debugging facilities. See also: [How to Retain your Sanity](/2011/06/08/how-to-retain-your-sanity.html)
+
+* [github repository](https://github.com/rioki/sanity)
