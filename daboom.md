@@ -7,7 +7,7 @@ nav: projects
 Da Boom! is a classic bomb laying game. You can play it in local multiplay
 or over the net.
 
-<a class="btn btn-primary btn-lg" href="http://files.rioki.org/DaBoom/Daboom-0.1.0.exe">
+<a class="btn btn-primary btn-lg" href="http://files.rioki.org/DaBoom/DaBoom-0.1.0.exe">
   <span class="glyphicon glyphicon-download"></span> Download
 </a>
 
