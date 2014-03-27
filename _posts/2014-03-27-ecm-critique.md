@@ -13,7 +13,7 @@ Broadly speaking the entity component model can be summarized as the following:
 An entity is composed of components who each serve a unique purpose. The entity
 does not contain any logic of it's own but is empowered bay said components.  
 
-<img class="img-responsive" src="/images/ecm/ecm-into.png" alt="Overviews are boring." />
+<img class="img-responsive" src="/images/ecm/ecm-intro.png" alt="Overviews are boring." />
 
 But what does the entity component model try to solve?
 
@@ -36,7 +36,7 @@ When solving the issue with components, the components GroundMovement, FlyingMov
 MeleAttack and MagicAttack are created and the different types of goblins are
 composed from these. 
 
-<img class="img-responsive" src="/images/ecm/fyling-magic-goblin.png" alt="Flying magic goblins are just a figment of your imagination." />
+<img class="img-responsive" src="/images/ecm/flying-magic-goblin.png" alt="Flying magic goblins are just a figment of your imagination." />
 
 Good job, now we went from one anti-pattern (deep inheritance hierarchy) to a 
 different anti-pattern (wide inheritance hierarchy). The central issue is that 
