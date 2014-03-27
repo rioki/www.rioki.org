@@ -72,7 +72,7 @@ within the systems and the components are just indicating the desired behaviour.
 The result is that a system has all the relevant data in a very concise and 
 compact format and as a result can operate quite efficiently.
 
-<img class="img-responsive" src="/images/ecm/better-graphcis.png" alt="Putting the high end into graphcis." />
+<img class="img-responsive" src="/images/ecm/better-graphics.png" alt="Putting the high end into graphcis." />
 
 But if you look closely you can see that we have all these useless components. 
 What if you removed the components and just used properties on the components and
