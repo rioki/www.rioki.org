@@ -33,7 +33,7 @@ have the [dreaded diamond][4] and virtual inheritance to solve. But most
 languages do simply not support a concise way to implement it. 
 
 When solving the issue with components, the components GroundMovement, FlyingMovment,
-MeleAttack and MagicAttack are created and the different types of goblins are
+MeleeAttack and MagicAttack are created and the different types of goblins are
 composed from these. 
 
 <img class="img-responsive" src="/images/ecm/flying-magic-goblin.png" alt="Flying magic goblins are just a figment of your imagination." />
@@ -80,7 +80,7 @@ the systems just look for appropriately named properties? Now you have duck typi
 
 <img class="img-responsive" src="/images/ecm/duck-typing.png" alt="If walks like a duck and quacks like a duck..." />
 
-Duck typing is a concept that is used allot in weakly typed languages, like 
+Duck typing is a concept that is used a lot in weakly typed languages, like 
 for example JavaScript or Python. The main idea here is that the actual type 
 if irrelevant, but specific properties and function are expected on a given
 object within a specific context. For example it is irrelevant if it is a 
