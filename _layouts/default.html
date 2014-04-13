@@ -47,15 +47,12 @@
     <script src="/js/slimbox2.js"></script>
     <script type="text/javascript">
       $(function() {
-        /*$('img.img-responsive').click(function () {
-          var img = $(this);
-          img.slimbox(img.attr('src'));
-        });*/
         $('img.img-responsive').each(function () {
           var img = $(this);
           var src = img.attr('src');
-          img.wrap('<a href="'+ src +'"></a>').slimbox(src);
+          img.wrap('<a href="'+ src +'" class="slimbox"></a>');
         });
+        $('a.slimbox').slimbox();
       });
     </script>    
     <script type="text/javascript">
