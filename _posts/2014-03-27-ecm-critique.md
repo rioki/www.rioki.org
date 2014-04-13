@@ -2,7 +2,7 @@
 layout: post
 title: "A Critique of the Entity Component Model"
 tags:
-    - games
+    - gamedev
     - engineering
 ---
 

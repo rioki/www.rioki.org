@@ -2,7 +2,7 @@
 layout: post
 title: "Unreal Engine 4: C++ vs. Blueprints"
 tags:
-    - games
+    - gamedev
     - ue4
     - ut2014
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Da Boom! - Post Mortem"
 tags:
-    - games
+    - gamedev
     - daboom
 ---
 
