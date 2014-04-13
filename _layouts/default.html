@@ -47,10 +47,8 @@
     <script src="/js/slimbox2.js"></script>
     <script type="text/javascript">
       $(function() {
-        $('img.img-responsive').each(function () {
-          var img = $(this);
-          var src = img.attr('src');          
-          img.wrap('<a href="' + src + '" rel="lightbox"></a>');
+        $('article>img').click(function () {
+          $(this).slimbox($(this).attr('src'));
         });
       });
     </script>    
