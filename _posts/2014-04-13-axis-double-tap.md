@@ -28,7 +28,9 @@ exposed on the Character, so that they can easily be tweaked later on.
 As you can see, I have not yet implemented the doge, so for now we will 
 just print "Doge Left" and "Doge Right". 
 
-<img class="img-responsive" src="/images/adt/AxisDoubleTap.jpg" alt="The Axis Double Tap macro." />
+<!--more-->
+
+<img class="img-responsive" src="/images/adt/AxisDoubleTap.jpg" alt="The AxisDoubleTap macro." />
 
 The `Axis Double Tap` selector works in three stages. The first stage 
 (`AxisSplit`) take the axis value and separates it into three execution pulses.
@@ -40,7 +42,25 @@ The second stage is a flank trigger. That is the continuous execution pulse
 is converted into one single pulse. This is done with the help of a `DoOnce`
 node. The impulse is routed into the that node and only passes through once, 
 any further pulses are dropped. Only until the input goes back to neural,
-the `DoOnce`
+the `DoOnce` is reset and thus a new pulse will be let through. 
+
+The third stage is the `DoubleTap` selector. This basically take the pulses
+and only emits a pulse if two consecutive pulses came in.
+
+<img class="img-responsive" src="/images/adt/AxisSplit.jpg" alt="The AxisSplit macro." />
+
+The `AxisSplit` is quite straight forward. Two chained `Branch` nodes each 
+comparing the value to the threshold and the inverted threshold. 
+
+<img class="img-responsive" src="/images/adt/DoubleTap.jpg" alt="The DoubleTap macro." />
+
+The `DoubleTap` is basically implemented through a `DoN` node. The `DoN` lets 
+two execution pulses through, but the flowing `Branch` only evaluates to true
+when the second pulse is emitted. The `Delay` is used to ensure that two pulses
+come without too much delay. If the delay is completed it will reset the `DoN`
+for a new round of impulses. 
+
+So you have it, once it is spelled out like this, it seems obvious. 
 
 [1]: /2014/03/21/ut2014.html
 [2]: http://www.unrealengine.com/
