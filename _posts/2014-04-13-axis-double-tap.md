@@ -32,7 +32,7 @@ just print "Doge Left" and "Doge Right".
 
 <img class="img-responsive" src="/images/adt/AxisDoubleTap.jpg" alt="The AxisDoubleTap macro." />
 
-The `Axis Double Tap` selector works in three stages. The first stage 
+The `AxisDoubleTap` selector works in three stages. The first stage 
 (`AxisSplit`) take the axis value and separates it into three execution pulses.
 The `Positive` pulse is when the value is above the threshold, the `Negative` 
 pulse is when the value is below the negative threshold and the `Neutral`
