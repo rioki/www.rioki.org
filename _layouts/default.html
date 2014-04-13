@@ -53,6 +53,7 @@
         });*/
         $('img.img-responsive').each(function () {
           var img = $(this);
+          var src = img.attr('src');
           img.wrap('<a href="'+ src +'"></a>').slimbox();
         });
       });
