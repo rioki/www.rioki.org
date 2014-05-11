@@ -47,12 +47,12 @@ are even smaller. Make a change and you can try it out, even before saving the
 Blueprint.
 
 The mixing of C++ and Blueprints makes for some mental confusion. Do I set the 
-value in C++, in the Blueprint's defaults or in the Blueptint's build script? 
+value in C++, in the Blueprint's defaults or in the Blueprint's build script? 
 It is often not clear what the best course of action is with this hybrid state,
-when you use Blueptins this is clear and obvious. They are just variables and
+when you use Blueprints this is clear and obvious. They are just variables and
 if you want to change them from the outside, you check one checkbox.
 
-For the time being I will take the following approach: *Use Blueptrins until I 
+For the time being I will take the following approach: *Use Blueprints until I 
 hit a roadblock.* Honestly, I think this will be never in the case of my 
 project.
 
