@@ -1,8 +1,7 @@
----
-layout: default
-title: Journal
-nav: journal
----
+{% set page.title = "Journal" %}
+{% set page.nav = "journal" %}
+{% extends 'default.html' %}
+{% block content %}
 <article>
 {% for post in site.posts %}
   <h2>{{post.title}}</h2>
@@ -11,9 +10,9 @@ nav: journal
       <a href="/tag/{{tag}}.html">{{tag}}</a>
     {% endfor %}
   </p>
-  <p class="text-muted">{{ post.date | date_to_string }}</p>
+  <p class="text-muted">{{ post.date|date('Y-m-d') }}</p>
   <p>
-      {{ post.content | summarize }}        
+      {{ post.summary|safe }}        
   </p>    
   <p class="pull-right">
     <a href="{{ post.url }}" class="btn btn-primary">read more</a>    
@@ -21,3 +20,4 @@ nav: journal
   <div class="clearfix"></div>
 {% endfor %}
 <article>
+{% endblock %}

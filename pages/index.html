@@ -1,0 +1,31 @@
+{% set page.title = "Rioki's Corner" %}
+{% set page.nav = "home" %}
+{% extends 'default.html' %}
+{% block content %}
+<div class="jumbotron">
+  <h1>{{ page.title }}</h1>
+  <p>Programming and other nonsense.<p>
+</div>
+  
+<article>
+<!-- TODO limit 3 -->
+{% for post in site.posts %}
+  {% if loop.index < 4 %}
+    <h2>{{post.title}}</h2>
+    <p class="pull-right">
+      {% for tag in post.tags %}
+        <a href="/tag/{{tag}}.html">{{tag}}</a>
+      {% endfor %}
+    </p>
+    <p class="text-muted">{{ post.date|date('Y-m-d') }}</p>
+    <p>
+        {{ post.summary|safe }}        
+    </p>    
+    <p class="pull-right">
+      <a href="{{ post.url }}" class="btn btn-primary">read more</a>    
+    </p>
+    <div class="clearfix"></div>  
+  {% endif %}      
+{% endfor %}
+</article>
+{% endblock %}

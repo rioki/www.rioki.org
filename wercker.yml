@@ -1,14 +1,12 @@
-box: wercker/ruby
+box: wercker/nodejs@1.0.2
 build:
   steps:
-    - bundle-install
-    - script:
-        name: generate site
-        code: bundle exec jekyll build --trace
+    - wercker/npm-install@0.9.3
+    - yeehaa/gulp@0.0.4
 deploy:
   steps:
     - s3sync:
         key_id: $KEY
         key_secret: $SECRET
         bucket_url: $URL
-        source_dir: _site/
+        source_dir: build
