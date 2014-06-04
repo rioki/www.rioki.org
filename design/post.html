@@ -8,7 +8,7 @@
       <a href="/tag/{{tag}}.html">{{tag}}</a>
     {% endfor %}
   </div>
-  <p class="text-muted">{{ page.date }}</p>
+  <p class="text-muted">{{ page.date|date('Y-m-d') }}</p>
   {{ content|safe }}
 </article>
 <aside>

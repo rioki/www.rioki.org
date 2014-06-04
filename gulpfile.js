@@ -52,14 +52,16 @@ function collectPosts() {
 
 function filename2date() {
     return through.obj(function (file, enc, cb) {                
-        var basename = path.basename(file.path);
+        var basename = path.basename(file.path, '.md');
         var match = rePostName.exec(basename);
         if (match)
         {
-            var year = match[1];            
-            var month = match[2];
-            var day = match[3];
+            var year     = match[1];            
+            var month    = match[2];
+            var day      = match[3];
+            var basename = match[4];
             file.page.date = new Date(year, month, day);
+            file.page.url  = '/' + year + '/' + month + '/' + day + '/' + basename + '.html';
         }
         
         this.push(file);
@@ -230,7 +232,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('watch', ['default'], function () {
-    gulp.watch(['posts/*.md', 'design/*.html'], ['posts', 'rss']);
+    gulp.watch(['posts/*.md', 'design/*.html'], ['posts', 'rss', 'tags']);
     gulp.watch(['pages/**/*', 'design/*.html'], ['pages']);
     gulp.watch(['images/**/*'], ['images']);
     gulp.watch(['files/**/*'], ['files']);
