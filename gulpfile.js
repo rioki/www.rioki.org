@@ -5,6 +5,7 @@ var marked      = require('gulp-marked');
 var minifyHtml  = require('gulp-minify-html');
 var rename      = require('gulp-rename');
 var clean       = require('gulp-clean');
+var gutil       = require('gulp-util');
 var path        = require('path');
 var swig        = require('swig');
 var through     = require('through2');
@@ -22,10 +23,20 @@ swig.setDefaults({
 var rePostName   = /(\d{4})-(\d{1,2})-(\d{1,2})-(.*)/;
 
 function collectPosts() {
-    var posts = [];            
+    var posts = [];       
+    var tags = [];
     return through.obj(function (file, enc, cb) {
         posts.push(file.page);
         posts[posts.length - 1].content = file.contents.toString();
+        
+        if (file.page.tags) {
+            file.page.tags.forEach(function (tag) {
+                if (tags.indexOf(tag) == -1) {
+                    tags.push(tag);
+                }
+            });
+        }
+        
         this.push(file);
         cb();
     },
@@ -34,6 +45,7 @@ function collectPosts() {
             return b.date - a.date;
         });
         site.posts = posts;
+        site.tags = tags;
         cb();
     });
 }
@@ -141,6 +153,38 @@ gulp.task('files', function () {
         .pipe(gulp.dest('build/files'));
 });
 
+function tags() {
+    
+    var stream = through.obj(function(file, enc, cb) {
+		this.push(file);
+		cb();
+	});
+    
+    if (site.tags)
+    {
+        site.tags.forEach(function (tag) {
+            var file = new gutil.File({
+                path: tag + '.html',
+                contents: new Buffer('')
+            });
+            file.page = {title: tag, tag: tag}
+            
+            stream.write(file);        
+        });
+    }
+    
+    stream.end();
+    stream.emit("end");
+    
+    return stream;
+}
+
+gulp.task('tags', ['posts'], function () {
+    return tags()
+        .pipe(applyTemplate('design/tag.html'))
+        .pipe(gulp.dest('build/tag'));
+});
+
 gulp.task('design:css', function () {
     return gulp.src('design/css/*.css')        
         .pipe(gulp.dest('build/css'));
@@ -175,7 +219,7 @@ gulp.task('rss', ['posts'], function () {
         .pipe(gulp.dest('build'));
 });
 
-gulp.task('default', ['posts', 'pages', 'images', 'files', 'design', 'rss']);
+gulp.task('default', ['posts', 'pages', 'images', 'files', 'tags', 'design', 'rss']);
 
 // quickfix for yeehaa's gulp step (TODO build a sane gulp step)
 gulp.task('test', ['default']);
