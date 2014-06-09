@@ -22,6 +22,8 @@ polish. The engine and editor is far from broken, but a few dints in the
 perfectly wrong places make working with the Unreal Engine 4 frustrating and
 unpleasant. 
 
+<!--more-->
+
 To begin with the documentation is severely limited. I understand that you 
 focused on getting the engine ready for release was the top priority. In 
 addition I can see that the body documentation is strongly growing and I 
@@ -80,5 +82,4 @@ wait for a more mature version of your engine.
 Best Regards,
 
 Sean "rioki" Farrell 
-
 

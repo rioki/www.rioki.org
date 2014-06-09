@@ -232,7 +232,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('watch', ['default'], function () {
-    gulp.watch(['posts/*.md', 'design/*.html'], ['posts', 'rss', 'tags']);
+    gulp.watch(['posts/*.md', 'design/*.html'], ['posts', 'pages', 'rss', 'tags']);
     gulp.watch(['pages/**/*', 'design/*.html'], ['pages']);
     gulp.watch(['images/**/*'], ['images']);
     gulp.watch(['files/**/*'], ['files']);
