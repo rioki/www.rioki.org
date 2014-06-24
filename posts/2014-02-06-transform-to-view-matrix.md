@@ -17,7 +17,17 @@ information together, I want to share it with you.
 The general case is quite simple, to get the view matrix (V) from the 
 transformation matrix (T), all you need to do is take the inverse.
 
-$$V = T^{-1}$$
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+  <mi>V</mi>
+  <mo>=</mo>
+  <msup>
+    <mi>T</mi>
+    <mrow>
+      <mo>-</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+</math>
 
 But computing the inverse of a 4x4 matrix is 
 [not much fun](http://www.cg.info.hiroshima-cu.ac.jp/~miyazaki/knowledge/teche23.html)
@@ -31,20 +41,107 @@ a view matrix through the look at function. You will see an interesting correlat
 The important thing to remember is that the transformation matrix is an 
 orthonormal basis with a position slapped on.
 
-$$
-X = (x_1, x_2, x_3) \\
-Y = (y_1, y_2, y_3) \\
-Z = (z_1, z_2, z_3) \\
-P = (p_1, p_2, p_3) \\
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+  <mover>
+    <mi>x</mi>
+    <mo>&rarr;</mo>
+  </mover>
+  <mo>=</mo>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mi>x</mi><mn>1</mn>
+      </msub>
+      <mo>,</mo>
+      <msub>
+        <mi>x</mi><mn>2</mn>
+      </msub>
+      <mo>,</mo>
+      <msub>
+        <mi>x</mi><mn>3</mn>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+</math>
 
-T = 
-\begin{pmatrix}
-  x_1 & y_1 & z_1 & p_1 \\
-  x_2 & y_2 & z_2 & p_2 \\
-  x_3 & y_3 & z_3 & p_3 \\
-    0 &   0 &   0 &   1 
- \end{pmatrix}
-$$
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+  <mover>
+    <mi>y</mi>
+    <mo>&rarr;</mo>
+  </mover>
+  <mo>=</mo>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mi>y</mi><mn>1</mn>
+      </msub>
+      <mo>,</mo>
+      <msub>
+        <mi>y</mi><mn>2</mn>
+      </msub>
+      <mo>,</mo>
+      <msub>
+        <mi>y</mi><mn>3</mn>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+</math>
+
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+  <mover>
+    <mi>z</mi>
+    <mo>&rarr;</mo>
+  </mover>
+  <mo>=</mo>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mi>z</mi><mn>1</mn>
+      </msub>
+      <mo>,</mo>
+      <msub>
+        <mi>z</mi><mn>2</mn>
+      </msub>
+      <mo>,</mo>
+      <msub>
+        <mi>z</mi><mn>3</mn>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+</math>
+
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+  <mi>T</mi>
+  <mo>=</mo>
+  <mfenced open='(' close=')' separators=''>
+    <mtable>
+      <mtr>
+        <mtd><msub><mi>x</mi><mn>1</mn></msub></mtd>
+        <mtd><msub><mi>y</mi><mn>1</mn></msub></mtd>
+        <mtd><msub><mi>z</mi><mn>1</mn></msub></mtd>
+        <mtd><msub><mi>p</mi><mn>1</mn></msub></mtd>
+      </mtr>
+      <mtr>
+        <mtd><msub><mi>x</mi><mn>2</mn></msub></mtd>
+        <mtd><msub><mi>y</mi><mn>2</mn></msub></mtd>
+        <mtd><msub><mi>z</mi><mn>2</mn></msub></mtd>
+        <mtd><msub><mi>p</mi><mn>2</mn></msub></mtd>
+      </mtr>
+      <mtr>
+        <mtd><msub><mi>x</mi><mn>3</mn></msub></mtd>
+        <mtd><msub><mi>y</mi><mn>3</mn></msub></mtd>
+        <mtd><msub><mi>z</mi><mn>3</mn></msub></mtd>
+        <mtd><msub><mi>p</mi><mn>3</mn></msub></mtd>
+      </mtr>
+      <mtr>
+        <mtd><mn>1</mn></mtd>
+        <mtd><mn>1</mn></mtd>
+        <mtd><mn>1</mn></mtd>
+        <mtd><mn>1</mn></mtd>
+      </mtr>
+    </mtable>
+  </mfenced>
+</math>
 
 If you look at the source code for [look at](https://github.com/rioki/glm/blob/master/src/projection.h#L40), 
 you will see some similarities: 
@@ -83,37 +180,115 @@ So to get the view matrix from a transformation matrix you do the following:
 
 with:
 
-$$
-T = 
-\begin{pmatrix}
-  x_1 & y_1 & z_1 & p_1 \\
-  x_2 & y_2 & z_2 & p_2 \\
-  x_3 & y_3 & z_3 & p_3 \\
-    0 &   0 &   0 &   1 
- \end{pmatrix} \\
-$$
- 
+
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+  <mi>T</mi>
+  <mo>=</mo>
+  <mfenced open='(' close=')' separators=''>
+    <mtable>
+      <mtr>
+        <mtd><msub><mi>x</mi><mn>1</mn></msub></mtd>
+        <mtd><msub><mi>y</mi><mn>1</mn></msub></mtd>
+        <mtd><msub><mi>z</mi><mn>1</mn></msub></mtd>
+        <mtd><msub><mi>p</mi><mn>1</mn></msub></mtd>
+      </mtr>
+      <mtr>
+        <mtd><msub><mi>x</mi><mn>2</mn></msub></mtd>
+        <mtd><msub><mi>y</mi><mn>2</mn></msub></mtd>
+        <mtd><msub><mi>z</mi><mn>2</mn></msub></mtd>
+        <mtd><msub><mi>p</mi><mn>2</mn></msub></mtd>
+      </mtr>
+      <mtr>
+        <mtd><msub><mi>x</mi><mn>3</mn></msub></mtd>
+        <mtd><msub><mi>y</mi><mn>3</mn></msub></mtd>
+        <mtd><msub><mi>z</mi><mn>3</mn></msub></mtd>
+        <mtd><msub><mi>p</mi><mn>3</mn></msub></mtd>
+      </mtr>
+      <mtr>
+        <mtd><mn>0</mn></mtd>
+        <mtd><mn>0</mn></mtd>
+        <mtd><mn>0</mn></mtd>
+        <mtd><mn>1</mn></mtd>
+      </mtr>
+    </mtable>
+  </mfenced>
+</math>
+
 You compute:  
 
-$$
-O = 
-\begin{pmatrix}
-  x_1 & x_2 & x_3 & 0 \\
-  y_1 & y_2 & y_3 & 0 \\
-  z_1 & z_2 & z_3 & 0 \\
-    0 &   0 &   0 & 1 
- \end{pmatrix} \\
- 
-E = 
-\begin{pmatrix}
-  1 & 0 & 0 & -p_1 \\
-  0 & 1 & 0 & -p_2 \\
-  0 & 0 & 1 & -p_3 \\
-  0 & 0 & 0 & 1 
- \end{pmatrix} \\
- 
-V = O \cdot E
-$$
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+  <mi>O</mi>
+  <mo>=</mo>
+  <mfenced open='(' close=')' separators=''>
+    <mtable>
+      <mtr>
+        <mtd><msub><mi>x</mi><mn>1</mn></msub></mtd>
+        <mtd><msub><mi>y</mi><mn>1</mn></msub></mtd>
+        <mtd><msub><mi>z</mi><mn>1</mn></msub></mtd>
+        <mtd><mn>0</mn></mtd>
+      </mtr>
+      <mtr>
+        <mtd><msub><mi>x</mi><mn>2</mn></msub></mtd>
+        <mtd><msub><mi>y</mi><mn>2</mn></msub></mtd>
+        <mtd><msub><mi>z</mi><mn>2</mn></msub></mtd>
+        <mtd><mn>0</mn></mtd>
+      </mtr>
+      <mtr>
+        <mtd><msub><mi>x</mi><mn>3</mn></msub></mtd>
+        <mtd><msub><mi>y</mi><mn>3</mn></msub></mtd>
+        <mtd><msub><mi>z</mi><mn>3</mn></msub></mtd>
+        <mtd><mn>0</mn></mtd>
+      </mtr>
+      <mtr>
+        <mtd><mn>0</mn></mtd>
+        <mtd><mn>0</mn></mtd>
+        <mtd><mn>0</mn></mtd>
+        <mtd><mn>1</mn></mtd>
+      </mtr>
+    </mtable>
+  </mfenced>
+</math>
+
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+  <mi>E</mi>
+  <mo>=</mo>
+  <mfenced open='(' close=')' separators=''>
+    <mtable>
+      <mtr>
+        <mtd><mn>1</mn></mtd>
+        <mtd><mn>0</mn></mtd>
+        <mtd><mn>0</mn></mtd>
+        <mtd><msub><mi>p</mi><mn>1</mn></msub></mtd>
+      </mtr>
+      <mtr>
+        <mtd><mn>0</mn></mtd>
+        <mtd><mn>1</mn></mtd>
+        <mtd><mn>0</mn></mtd>
+        <mtd><msub><mi>p</mi><mn>2</mn></msub></mtd>
+      </mtr>
+      <mtr>
+        <mtd><mn>0</mn></mtd>
+        <mtd><mn>0</mn></mtd>
+        <mtd><mn>1</mn></mtd>
+        <mtd><msub><mi>p</mi><mn>3</mn></msub></mtd>
+      </mtr>
+      <mtr>
+        <mtd><mn>0</mn></mtd>
+        <mtd><mn>0</mn></mtd>
+        <mtd><mn>0</mn></mtd>
+        <mtd><mn>1</mn></mtd>
+      </mtr>
+    </mtable>
+  </mfenced>
+</math>
+
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+  <mi>V</mi>
+  <mo>=</mo>
+  <mi>O</mi>
+  <mo>&sdot;</mo>
+  <mi>E</mi>
+</math>
 
 This solution is quite simple and involves mostly copying values around. 
 
