@@ -60,7 +60,7 @@ function filename2date() {
             var month    = match[2];
             var day      = match[3];
             var basename = match[4];
-            file.page.date = new Date(year, month, day);
+            file.page.date = new Date(year + "-" + month + "-" + day);
             file.page.url  = '/' + year + '/' + month + '/' + day + '/' + basename + '.html';
         }
         
