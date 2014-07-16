@@ -73,8 +73,8 @@ to write something like:
         for (unsinged int i = 0; i < new_size; i++)
         {
             // guard against out of bounds access
-            float ai = i < a.size : 0.0f;
-            float bi = i < b.size : 0.0f;
+            float ai = i < a.size ? a[i] : 0.0f;
+            float bi = i < b.size ? b[i] : 0.0f;
             result[i] = ai + bi;
         }
         
@@ -88,7 +88,7 @@ size, each access must be checked and guarded.
 Compare that to the version using templates:
 
     template <typename T, size_t N>
-    vector<T, N> operator (const vector<T, N>& a, const vector<T, N>& b)
+    vector<T, N> operator + (const vector<T, N>& a, const vector<T, N>& b)
     {
         vector<T, N> result;
         
