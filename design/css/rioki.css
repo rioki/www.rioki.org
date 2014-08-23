@@ -87,3 +87,8 @@ article img {
   margin: 5px auto;
   max-width: 640px;
 }
+
+/* We don't need no stinking large h1! */
+h1, .h1 {
+    font-size: 30px;
+}
