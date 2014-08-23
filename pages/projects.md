@@ -7,65 +7,41 @@ nav: projects
 Here are a few of my notable project I have built over time. You can
 find most of my work on [github](https://github.com/rioki)
 
-## Game
+Games
+-----
+* [nlc](http://nlc.rioki.org)
+  A game about launching nukes, maybe.  
+* [DaBoom!](/daboom.html)
+  A bomberman clone that works over the network.   
+* [d16](http://github.com/rioki/d16)
+  DCPU-16 assembler and simulator for 0x10c
 
-### DaBoom!
+C++ Libraries
+-------------
 
-Da Boom! is a classic bomb laying game. You can play it in local multiplay
-or over the net.
+* [libxmlmm](https://github.com/rioki/libxmlmm)
+  C++ wrapper around libxml2, that only used standard c++. 
+* [rjson](https://github.com/rioki/rjson)
+  A JSON parser for C++ that builds ontop of standard c++.
+* [pkzo](https://github.com/rioki/pkzo)
+  Presentation layer framework for 3D graphic applications. 
+* [spdr](https://github.com/rioki/spdr)
+  A networking abstraction layer. 
+* [glm](https://github.com/rioki/glm)
+  All the math you need for a 3D application.  
+* [musli](https://github.com/rioki/musli)
+  A C++ serialisation library.  
+* [rtest](https://github.com/rioki/rtest)
+  A minimalist unit testing framework, with UnitTest++ compatible API.  
+* [ezrc](https://github.com/rioki/ezrc)
+  A platform independent resource engagement for libraries. 
+* [sanity](https://github.com/rioki/sanity)
+  A assertion and tracing library.
 
-* [project page](/daboom.html)
+Websites
+--------
 
-## Libraries
-
-### pkzo
-
-[pkzo](https://github.com/rioki/pkzo) is a comprehensive library aimed to 
-provide all needed tools to build the presentation layer of a game or 3D 
-application. This includes 3D rendering, 2D rendering, user interface, 
-sound and input. 
-
-* [github repository](https://github.com/rioki/pkzo)
-
-### spdr
-
-[spdr](https://github.com/rioki/spdr) tries to simplify network comunication
-to simply sending messages. 
-
-* [github repository](https://github.com/rioki/spdr)
-
-### libxmlmm
-
-[libxmlmm](https://github.com/rioki/libxmlmm) is a C++ wrapper around 
-[libxml2](http://xmlsoft.org). It provides native support for XML parsing, 
-querying, manipulation and writing of XML with the help of a DOM.
-
-* [github repository](https://github.com/rioki/libxmlmm)
-
-### rjson
-
-[rjson] is an facilitates reading and writing of JSON. The library tries to 
-be as simple as possible and so uses almost only standard components.
-
-* [github repository](https://github.com/rioki/rjson)
-
-### glm 
-
-[glm](https://github.com/rioki/glm) is a utility library that implements basic 
-math constructs compliant with GLSL's specification.
-
-* [github repository](https://github.com/rioki/glm)
-
-### rtest
-
-[rtest](https://github.com/rioki/rtest) is a minimalistic unit testing library.
-It's API is a subset of UnitTest++. 
-
-* [github repository](https://github.com/rioki/rtest)
-
-### sanity
-
-[sanity](https://github.com/rioki/sanity) is a utility library that implements
-basic debugging facilities. See also: [How to Retain your Sanity](/2011/06/08/how-to-retain-your-sanity.html)
-
-* [github repository](https://github.com/rioki/sanity)
+* [fedz.me](http://fedz.me)
+  A RSS scanner.
+* [www.rioki.org](http://www.rioki.org)
+  This blog.
