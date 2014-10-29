@@ -90,7 +90,7 @@ the state array is shuffled and a is reset to 0. So in C this looks like such:
         absorb_nibble(high(b));
     }
 
-    void absorb_nibble(spritz_state* state, spritz_byte x)
+    void absorb_nibble(byte x)
     {
         if (a == N / 2)
         {
