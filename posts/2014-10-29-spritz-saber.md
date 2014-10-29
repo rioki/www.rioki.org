@@ -239,5 +239,5 @@ and understandability.
 [Spritz]: http://people.csail.mit.edu/rivest/pubs/RS14.pdf
 [gh1]: http://github.com/rioki/spritzsaber
 [gh2]: http://github.com/rioki/ciphersaber
-[RNG]: http://en.wikipedia.org/wiki/Pseudorandom_number_generator
+[PRNG]: http://en.wikipedia.org/wiki/Pseudorandom_number_generator
 
