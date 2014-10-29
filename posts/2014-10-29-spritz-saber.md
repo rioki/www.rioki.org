@@ -171,7 +171,7 @@ it just advances the register a and if necessary shuffles the state array.
 This bit, also beats me why you would want to do this, bit the paper is quite 
 insistent. Here is the code:
     
-    void absorb_stop(state* state)
+    void absorb_stop()
     {
         if (a == N / 2)
         {
