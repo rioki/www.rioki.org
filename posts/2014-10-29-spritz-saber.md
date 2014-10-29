@@ -238,6 +238,6 @@ and understandability.
 [Cipher Saber]: http://ciphersaber.gurus.org/
 [Spritz]: http://people.csail.mit.edu/rivest/pubs/RS14.pdf
 [gh1]: http://github.com/rioki/spritzsaber
-[gh1]: http://github.com/rioki/ciphersaber
+[gh2]: http://github.com/rioki/ciphersaber
 [RNG]: http://en.wikipedia.org/wiki/Pseudorandom_number_generator
 
