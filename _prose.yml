@@ -15,5 +15,4 @@ prose:
           element: "multiselect"
           label: "Tags"
           help: "Tags of this post"
-          options: [meta, cpp, opengl]
           alterable: true
