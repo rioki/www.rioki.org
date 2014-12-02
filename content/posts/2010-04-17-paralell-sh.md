@@ -24,5 +24,5 @@ installation. Guess what, it did not work. The problem is that it checks for
 So I changed the code to use *ps* and *grep*. Its probably not as effective, 
 but it works on msys...
 
-Download the modified script; <a href="/files/parallel.sh">parallel.sh</a>
+Download the modified script; <a href="/media/parallel.sh">parallel.sh</a>
 
