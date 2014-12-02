@@ -10,6 +10,8 @@ When migrating from [jekyl to gulp.js][1] I was basically following jekyls lead,
 
 Some point later [Daniel Naab][2] adapted my aproach. Although he build ontop of my ideas, [he played the ball out of the park][3]. What really stuck me as ingenious is the integration of [prose.io][4]. The combination of [travis-ci][5] and prose.io, means that novice users can author the website without knowing what git and a text editor is. The result is something close to a high end CMS with static generated HTML pages.
 
+<!--more-->
+
 So I took some inspiration back from Daniel Naab. So here is a rundown from my enhanced glup.js powered website, this thime with wercker and prose.io support.
 
 The basic layout of the website is as follows:
