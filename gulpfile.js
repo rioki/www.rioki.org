@@ -136,9 +136,30 @@ gulp.task('posts', function () {
         .pipe(gulp.dest('build'));
 });
 
+function dummy(file) {
+  var stream = through.obj(function(file, enc, cb) {
+		this.push(file);
+		cb();
+	});
+    
+  if (site)
+  {
+    var file = new gutil.File({
+      path: file,
+      contents: new Buffer('')
+    });
+    file.page = {}        
+    stream.write(file);        
+  }
+  
+  stream.end();
+  stream.emit("end");
+  
+  return stream;
+}
+
 gulp.task('index', ['posts'], function () {
-    return gulp.src('templates/index.html')
-        .pipe(frontMatter({property: 'page', remove: true}))
+    return dummy('index.html')
         .pipe(applyTemplate('templates/index.html'))
         .pipe(gulp.dest('build/'));
 });
@@ -234,13 +255,12 @@ gulp.task('tags', ['posts'], function () {
 });
 
 gulp.task('rss', ['posts'], function () {
-  gulp.src('templates/atom.xml')
-    .pipe(frontMatter({property: 'page', remove: true}))
+  return dummy('atom.xml')
     .pipe(applyTemplate('templates/atom.xml'))
     .pipe(gulp.dest('build/'));
 });
 
-gulp.task('default', ['assets', 'pages', 'media', 'posts', 'index', 'archive', 'tags', 'rss' /*'posts', 'pages', 'images', 'files', 'tags', 'design', 'rss'*/]);
+gulp.task('default', ['assets', 'pages', 'media', 'posts', 'index', 'archive', 'tags', 'rss']);
 
 // quickfix for yeehaa's gulp step (TODO build a sane gulp step)
 gulp.task('test', ['default']);
