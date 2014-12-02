@@ -1,0 +1,19 @@
+prose:
+  rooturl: 'content'
+  siteurl: 'http://www.rioki.org'
+  media: 'content/media'
+  metadata:
+    content/posts:      
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          help: "The blog post title"
+          placeholder: "Enter title"
+       - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Tags"
+          help: "Tags of this post"
+          options: [meta, cpp, opengl]
+          alterable: true
