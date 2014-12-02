@@ -10,9 +10,14 @@ prose:
           label: "Title"
           help: "The blog post title"
           placeholder: "Enter title"
-       - name: "tags"
+      - name: "tags"
         field:
           element: "multiselect"
           label: "Tags"
-          help: "Tags of this post"
           alterable: true
+          - name: "meta"
+            value: "meta"
+          - name: "opengl"
+            value: "opengl"
+          - name: "C++"
+            value: "cpp"
