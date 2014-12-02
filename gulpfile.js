@@ -12,11 +12,11 @@ var through     = require('through2');
 var connect     = require('connect');
 var http        = require('http');
 
-var site        = require('./site.json');
+var site  = require('./site.json');
 site.time = new Date();
 
 swig.setDefaults({ 
-    loader: swig.loaders.fs(__dirname + '/design'),
+    loader: swig.loaders.fs(__dirname + '/templates'),
     cache: false
 });
 
@@ -93,14 +93,33 @@ function applyTemplate(templateFile) {
     });
 }
 
+gulp.task('assets', function () {
+    return gulp.src('assets/**/*')        
+        .pipe(gulp.dest('build/'));
+});
+
+gulp.task('media', function () {
+    return gulp.src('content/media/**/*')        
+        .pipe(gulp.dest('build/media'));
+});
+
+gulp.task('pages', function () {
+    return gulp.src('content/pages/*.md')
+        .pipe(frontMatter({property: 'page', remove: true}))
+        .pipe(marked())
+        .pipe(applyTemplate('templates/page.html'))
+        .pipe(rename({extname: '.html'}))
+        .pipe(gulp.dest('build'));
+});
+
 gulp.task('posts', function () {
-    return gulp.src('posts/*.md')
+    return gulp.src('content/posts/*.md')
         .pipe(frontMatter({property: 'page', remove: true}))        
         .pipe(marked())
         .pipe(summarize('<!--more-->'))
         .pipe(filename2date())
         .pipe(collectPosts())
-        .pipe(applyTemplate('design/post.html'))
+        .pipe(applyTemplate('templates/post.html'))
         .pipe(rename(function (path) {
             path.extname = ".html";
             var match = rePostName.exec(path.basename);
@@ -117,130 +136,129 @@ gulp.task('posts', function () {
         .pipe(gulp.dest('build'));
 });
 
-// the posts must be built so that the site is amended 
-gulp.task('pages:html', ['posts'], function () {
-    return gulp.src(['pages/*.html'])
-        // use gulp-swig?
-        .pipe(through.obj(function (file, enc, cb) {            
-            var data = {
-                site: site,
-                page: {} // empty object that can be extended as needed
-            };
-            var tpl = swig.compileFile(file.path);
-            file.contents = new Buffer(tpl(data), 'utf8');
-            this.push(file);
-            cb();
-        }))        
-        .pipe(gulp.dest('build'));
-});
-
-gulp.task('pages:md', function () {
-    return gulp.src('pages/*.md')
+gulp.task('index', ['posts'], function () {
+    return gulp.src('templates/index.html')
         .pipe(frontMatter({property: 'page', remove: true}))
-        .pipe(marked())
-        .pipe(applyTemplate('design/page.html'))
-        .pipe(rename({extname: '.html'}))
-        .pipe(gulp.dest('build'));
+        .pipe(applyTemplate('templates/index.html'))
+        .pipe(gulp.dest('build/'));
 });
 
-gulp.task('pages', ['pages:md', 'pages:html']);
-
-gulp.task('images', function () {
-    return gulp.src('images/**/*')        
-        .pipe(gulp.dest('build/images'));
-});
-
-gulp.task('files', function () {
-    return gulp.src('files/**/*')        
-        .pipe(gulp.dest('build/files'));
-});
-
-function tags() {
-    
-    var stream = through.obj(function(file, enc, cb) {
+function posts(basename, count) {
+  var stream = through.obj(function(file, enc, cb) {
 		this.push(file);
 		cb();
 	});
     
-    if (site.tags)
-    {
-        site.tags.forEach(function (tag) {
-            var file = new gutil.File({
-                path: tag + '.html',
-                contents: new Buffer('')
-            });
-            file.page = {title: tag, tag: tag}
-            
-            stream.write(file);        
+  if (site.posts)
+  {
+    var c     = 0;
+    var page  = 0;
+    var posts = [];
+    site.posts.forEach(function (post) {
+      posts.push(post);
+      c++;
+      if (c == count) {        
+        var file = new gutil.File({
+          path: basename + (page == 0 ? '' : page) + '.html',
+          contents: new Buffer('')
         });
+        console.log('page=' + page + ' c=' + c + ' posts.length=' + site.posts.length);
+        file.page = {
+          posts: posts, 
+          prevPage: page != 0 ? basename + ((page-1) == 0 ? '' : page-1) + '.html' : null,
+          nextPage: (page+1) * count < site.posts.length ? basename + (page+1) + '.html' : null,
+          };
+        stream.write(file);
+        
+        c = 0;
+        posts = [];
+        page++;
+      }
+    });   
+    
+    if (posts.length != 0) {
+      var file = new gutil.File({
+        path: basename + (page == 0 ? '' : page) + '.html',
+        contents: new Buffer('')
+      });
+      file.page = {
+        posts: posts, 
+        prevPage: page != 0 ? basename + ((page-1) == 0 ? '' : page) + '.html' : null,
+        nextPage: null,
+        };
+      stream.write(file);
     }
+  }
+  
+  stream.end();
+  stream.emit("end");
+  
+  return stream;
+}
+
+gulp.task('archive', ['posts'], function () {
+    return posts('journal', 10)
+        .pipe(applyTemplate('templates/journal.html'))
+        .pipe(gulp.dest('build/'));
+});
+
+function tags() {    
+  var stream = through.obj(function(file, enc, cb) {
+		this.push(file);
+		cb();
+	});
     
-    stream.end();
-    stream.emit("end");
-    
-    return stream;
+  if (site.tags)
+  {
+    site.tags.forEach(function (tag) {
+      var file = new gutil.File({
+        path: tag + '.html',
+        contents: new Buffer('')
+      });
+      file.page = {title: tag, tag: tag}
+            
+      stream.write(file);        
+    });
+  }
+  
+  stream.end();
+  stream.emit("end");
+  
+  return stream;
 }
 
 gulp.task('tags', ['posts'], function () {
     return tags()
-        .pipe(applyTemplate('design/tag.html'))
+        .pipe(applyTemplate('templates/tag.html'))
         .pipe(gulp.dest('build/tag'));
 });
 
-gulp.task('design:css', function () {
-    return gulp.src('design/css/*.css')        
-        .pipe(gulp.dest('build/css'));
-});
-
-// use cndjs where possible
-gulp.task('design:js', function () {
-    return gulp.src('design/js/*.js')        
-        .pipe(gulp.dest('build/js'));
-});
-
-gulp.task('design:favico', function () {
-    return gulp.src('design/favicon.ico')        
-        .pipe(gulp.dest('build'));
-});
-
-gulp.task('design', ['design:css', 'design:js', 'design:favico']);
-
 gulp.task('rss', ['posts'], function () {
-    return gulp.src(['atom.xml'])
-        // use gulp-swig?
-        .pipe(through.obj(function (file, enc, cb) {            
-            var data = {
-                site: site,
-                page: {} // empty object that can be extended as needed
-            };
-            var tpl = swig.compileFile(file.path);
-            file.contents = new Buffer(tpl(data), 'utf8');
-            this.push(file);
-            cb();
-        }))        
-        .pipe(gulp.dest('build'));
+  gulp.src('templates/atom.xml')
+    .pipe(frontMatter({property: 'page', remove: true}))
+    .pipe(applyTemplate('templates/atom.xml'))
+    .pipe(gulp.dest('build/'));
 });
 
-gulp.task('default', ['posts', 'pages', 'images', 'files', 'tags', 'design', 'rss']);
+gulp.task('default', ['assets', 'pages', 'media', 'posts', 'index', 'archive', 'tags', 'rss' /*'posts', 'pages', 'images', 'files', 'tags', 'design', 'rss'*/]);
 
 // quickfix for yeehaa's gulp step (TODO build a sane gulp step)
 gulp.task('test', ['default']);
 
 gulp.task('clean', function() {
-    return gulp.src('build', {read: false})
-        .pipe(clean());
+  return gulp.src('build', {read: false})
+    .pipe(clean());
 });
 
 gulp.task('watch', ['default'], function () {
-    gulp.watch(['posts/*.md', 'design/*.html'], ['posts', 'pages', 'rss', 'tags']);
-    gulp.watch(['pages/**/*', 'design/*.html'], ['pages']);
-    gulp.watch(['images/**/*'], ['images']);
-    gulp.watch(['files/**/*'], ['files']);
-    gulp.watch(['design/**/*'], ['design']);
-    
-    var app = connect()
-        .use(connect.static('build'))
-        .use(connect.directory('build'));
-    
-    http.createServer(app).listen(3000);
+  gulp.watch(['assets/**/*'], ['assets']);
+  gulp.watch(['content/media'], ['media'])
+  gulp.watch(['templates/page.html','content/pages/*.md'], ['pages']);
+  gulp.watch(['templates/post.html', 'templates/index.html', 'templates/journal.html','content/posts/*.md'], ['posts', 'index', 'archive', 'tags', 'rss']);
+  
+  var app = connect()
+    .use(connect.static('build'))
+    .use(connect.directory('build'));
+  
+  http.createServer(app).listen(3000);
 });
