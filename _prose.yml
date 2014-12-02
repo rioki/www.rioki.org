@@ -13,11 +13,14 @@ prose:
       - name: "tags"
         field:
           element: "multiselect"
-          label: "Tags"
-          alterable: true
-          - name: "meta"
-            value: "meta"
-          - name: "opengl"
-            value: "opengl"
-          - name: "C++"
-            value: "cpp"
+          label: "Add Tags"
+          placeholder: "Choose Tags"
+          options:
+            - name: "Apples"
+              value: "apples"
+            - name: "Bananas"
+              value: "bananas"
+            - name: "Pears"
+              value: "pears"
+            - name: "Mangos"
+              value: "mangos"
