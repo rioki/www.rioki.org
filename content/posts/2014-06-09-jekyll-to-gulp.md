@@ -1,10 +1,13 @@
 ---
-title: "From Jekyll to Gulp.js"
-tags:
-    - gulp
-    - meta
-    - jekyll
+title: From Jekyll to Gulp.js
+tags: 
+  - gulp
+  - meta
+  - jekyll
+published: true
 ---
+
+*Note: I overhauled the generation process to be simple and more streamlined. This post is not wrong, it is just sligtly inefficent. In addition to this post you may want to read [Overhaul of Page Generation](/2014/12/02/overhaul-of-page-generation.html)*
 
 For quite a long time this site was powered by the static site generator 
 [jekyll]. I came into contact with Jekyll through the [github pages], that
