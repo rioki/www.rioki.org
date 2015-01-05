@@ -1,9 +1,12 @@
 ---
-published: false
 title: EventEmitter in C++
 tags: 
   - cpp
+  - design
 ---
+
+**Note:** *While writing this article I noticed in flaw how the listeners are
+stored. You can read everything about the [Revised EventEmitter][4].*
 
 When it comes to C++ callback / event handling I have for a long time relied on 
 [sigc++][1]. But since the release and mainstream adoption of C++11, I have more 
@@ -257,11 +260,18 @@ The implementation also contains special cases of `add_listener` and `on` for
 the case with no arguments. This is has to do with the oddity that C++ has
 trouble specifying empty variadtic template arguments. 
 
+[You can find the whole code in this gist][3].
+
 ## Optimization
 
-As I wrote this, I noticed that the map of listeners is wrongly structured. It is optimized for efficiently removing listeners. But in normal operation the `emit` is called really often and listeners are removed farly seldom. It should be a multimap, that uses the event id as key. When I have a working copy of this implementation, I will show it off here. 
+As I wrote this, I noticed that the map of listeners is wrongly structured. It 
+is optimized for efficiently removing listeners. But in normal operation the 
+`emit` is called really often and listeners are removed farly seldom. It should 
+be a multimap, that uses the event id as key. When I have a working copy of 
+this implementation, I will show it off here. 
 
     
 [1]: http://libsigc.sourceforge.net/
 [2]: http://nodejs.org/
 [3]: https://gist.github.com/rioki/1290004d7505380f2b1d
+[4]: /2015/01/05/revised-eventemitter.html
