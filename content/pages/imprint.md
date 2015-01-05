@@ -14,10 +14,11 @@ If you want to contact me via email, email me at [sean.farrell@rioki.org][6].
 All material on this site unless otherwise stated is copyright 
 &copy; 2009-2015 Sean Farrell. 
 
-This website was generated with [gulp] and deployed with [Wercker]. 
-The design is based on [bootstrap].
+This website was generated with [gulp], deployed with [Wercker] and
+hosted on [Amazon S3][7]. The design is based on [bootstrap].
 
 [gulp]: http://jekyllrb.com/
 [Wercker]: http://wercker.com/
 [bootstrap]: http://getbootstrap.com/
 [6]: mailto:sean.farrell@rioki.org
+[7]: https://aws.amazon.com/s3/
