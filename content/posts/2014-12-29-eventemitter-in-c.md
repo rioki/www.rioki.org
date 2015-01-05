@@ -2,7 +2,7 @@
 title: EventEmitter in C++
 tags: 
   - cpp
-  - design
+  - programing
 ---
 
 **Note:** *While writing this article I noticed in flaw how the listeners are

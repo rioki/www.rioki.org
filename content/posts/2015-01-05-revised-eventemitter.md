@@ -2,7 +2,7 @@
 title: Revised EventEmitter
 tags: 
   - cpp
-  - design
+  - programing
 ---
 
 I wrote a [C++ incarnation of node.js' EventEmitter][1]. But as things are, 
