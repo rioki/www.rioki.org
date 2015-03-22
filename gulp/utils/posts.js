@@ -3,7 +3,7 @@ var gutil = require('gulp-util');
 
 var config = require('../config').postsUtil;
 
-var site  = require(config.siteConfig);
+var site  = config.siteConfig;
 
 site.time = new Date();
 

@@ -4,7 +4,7 @@ var through = require('through2');
 
 var config = require('../config').applyTemplate;
 
-var site  = require(config.siteConfig);
+var site  = config.siteConfig;
 
 site.time = new Date();
 

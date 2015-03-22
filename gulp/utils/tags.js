@@ -3,7 +3,7 @@ var gutil = require('gulp-util');
 
 var config = require('../config').tagsUtil;
 
-var site  = require(config.siteConfig);
+var site  = config.siteConfig;
 
 module.exports = function () {    
   var stream = through.obj(function(file, enc, cb) {

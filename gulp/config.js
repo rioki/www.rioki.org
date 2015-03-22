@@ -8,7 +8,7 @@ var baseTemplates = '/templates/';
 var htmlRenameExt = '.html';
 var mediaSrc = '/media';
 var rePostName   = /(\d{4})-(\d{1,2})-(\d{1,2})-(.*)/;
-var siteConfig = '../../site.json';
+var siteConfig = require('../site.json');
 
 module.exports = {
   assets:{

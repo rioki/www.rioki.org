@@ -2,7 +2,7 @@ var through = require('through2');
 
 var config = require('../config').collectPosts;
 
-var site  = require(config.siteConfig);
+var site  = config.siteConfig;
 
 site.time = new Date();
 
