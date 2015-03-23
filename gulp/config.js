@@ -61,7 +61,7 @@ module.exports = {
   },
   watch:{
     assetsSrc:[assetsSrc],
-    mediaSrc:[baseContent+mediaSrc+'**/*'],
+    mediaSrc:[baseContent+mediaSrc+'/**/*'],
     pagesSrc:[baseTemplates+'page.html',baseContent+'/pages/'+'*'+markDownExtension],
     blogSrc:[baseTemplates+'post.html', baseTemplates+'index.html',baseTemplates+'journal.html',baseContent+'/posts/'+'*'+markDownExtension]
   },
