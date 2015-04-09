@@ -280,5 +280,5 @@ gulp.task('watch', ['default'], function () {
     .use(connect.static('build'))
     .use(connect.directory('build'));
   
-  http.createServer(app).listen(3000);
+  http.createServer(app).listen(8080);
 });
