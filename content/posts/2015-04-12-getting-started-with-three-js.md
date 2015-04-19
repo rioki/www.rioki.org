@@ -130,7 +130,7 @@ invocation of the actual render function of the renderer.
 You can see the [full code on github][3] and the [entire thing in action][4].
 
 There are a few remaining issues, such as resizing and attaching to an existing
-canvas, but that I will address in a further article.
+canvas, but that I will address in a [further article][5]. 
     
 [WebGL]: https://www.chromeexperiments.com/webgl
 [OpenGL]: https://www.opengl.org/
@@ -140,3 +140,4 @@ canvas, but that I will address in a further article.
 [2]: http://blog.db-in.com/cameras-on-opengl-es-2-x/
 [3]: https://github.com/rioki/three.rioki.org/blob/master/first.html
 [4]: http://three.rioki.org/first.html
+[5]: /2015/04/19/threejs-resize-and-canvas.html
