@@ -41,10 +41,10 @@ C++ Libraries
 JavaScript Libraries
 --------------------
 
-* [glow.js] (https://github.com/rioki/glow.js)
+* [glow.js](https://github.com/rioki/glow.js)
   A WebGL Object Wrapper.
 
-* [node-thumber] (https://github.com/rioki/node-thumper)
+* [node-thumber](https://github.com/rioki/node-thumper)
   A thumbnail generator.
 
 
