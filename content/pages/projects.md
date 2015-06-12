@@ -27,7 +27,7 @@ C++ Libraries
   Presentation layer framework for 3D graphic applications. 
 * [spdr](https://github.com/rioki/spdr)
   A networking abstraction layer. 
-* [glm](https://github.com/rioki/glm)
+* [rgm](https://github.com/rioki/rgm)
   All the math you need for a 3D application.  
 * [musli](https://github.com/rioki/musli)
   A C++ serialisation library.  
@@ -37,6 +37,16 @@ C++ Libraries
   A platform independent resource engagement for libraries. 
 * [sanity](https://github.com/rioki/sanity)
   A assertion and tracing library.
+  
+JavaScript Libraries
+--------------------
+
+* [glow.js] (https://github.com/rioki/glow.js)
+  A WebGL Object Wrapper.
+
+* [node-thumber] (https://github.com/rioki/node-thumper)
+  A thumbnail generator.
+
 
 Websites
 --------
