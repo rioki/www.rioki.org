@@ -32,12 +32,12 @@ do "tomorrow". (Occasionally I also push them off to "next weekend" or
 > *A mystical land where 99% of all human productivity, motivation and
 > achievement is stored. *
 
-<img src="/media/ontop/swipes2.png" class="img-responsive">
-
 Today the list remained with only two items, with a further 2 waiting in 
 "later today". Also what's not on the list are minor tasks from "cleaning up
 house", anything about my work on fedz.me and the fact that I need to make a 
 pizza dough, because my daughter comes in for lunch and I promised pizza. 
+
+<img src="/media/ontop/swipes2.png" class="img-responsive">
 
 This approach of fist looking at the big picture and then extract actionable 
 tasks comes from the time I rigorously made a productivity plan each morning. 
