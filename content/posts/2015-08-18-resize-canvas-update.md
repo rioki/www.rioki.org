@@ -32,7 +32,7 @@ So here is my revised solution, that actually works with the canvas:
 So what is the difference?
 
 * The code uses clientHeight and clientWidth, since the properties width and 
-height of the canvas mean the resolution.
+height of the canvas are the resolution.
 * The interval id is returned, this is good, since this ensures that you can
 call clearInterval on it.
 * The code is written by me and better formatted. (Important!)
