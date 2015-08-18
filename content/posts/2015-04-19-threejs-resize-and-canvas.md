@@ -52,6 +52,8 @@ created appropriately.
 
     var camera = new THREE.PerspectiveCamera(75, canvas.clientWidth/canvas.clientHeight, 0.1, 100);
     
+[WARNING: The blow code does not work! See the updated code.][99]
+    
 Like in the case of the fullscreen canvas, we listen to resize events of the 
 canvas and react appropriately.
 
@@ -74,3 +76,4 @@ Of course, now you can have multiple renderers attached to different canvases.
 [5]: https://github.com/rioki/three.rioki.org/blob/master/resize-window.html
 [6]: http://three.rioki.org/resize-canvas.html
 [7]: https://github.com/rioki/three.rioki.org/blob/master/resize-canvas.html
+[99]: /2015/08/18/resize-canvas-update.html
