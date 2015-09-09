@@ -9,7 +9,7 @@ Behind the pseudonym rioki is Sean Farrell.
 Bio 
 --- 
 
-<img src="/media/sean_farrell.jpg" alt="Sean Farrell" align="left" />
+<img src="/media/sean_farrell.jpg" alt="Sean Farrell" align="left" class="img-responsive" />
 
 I was born in Phoenix, Arizona, USA on the 17th of October 1982. My 
 mother is German and my Father is US-American. This makes me 
@@ -56,8 +56,7 @@ the [TIA Portal][8].
 
 After compleating the V11 and V12 versions of the TIA-Portal I joined 
 development of the [PCS7 CFC Editor][psc7_es] in mid 2012, where I am working on the 
-CFC compiler. I am currently working on a feature for the 8.1 version, 
-which I can't talk about yet.
+CFC compiler.
 
 Origin of the Name Rioki 
 ------------------------
