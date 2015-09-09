@@ -9,6 +9,7 @@ find most of my work on [github](https://github.com/rioki)
 
 Games
 -----
+
 * [nlc](http://nlc.rioki.org)
   A game about launching nukes, maybe.  
 * [DaBoom!](/daboom.html)
@@ -41,8 +42,8 @@ C++ Libraries
 JavaScript Libraries
 --------------------
 
-* [glow.js](https://github.com/rioki/glow.js)
-  A WebGL Object Wrapper.
+* [pkzo.js](https://github.com/rioki/pkzo.js)
+  WebGL Scene Graph
 
 * [node-thumber](https://github.com/rioki/node-thumper)
   A thumbnail generator.
