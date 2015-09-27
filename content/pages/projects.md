@@ -44,7 +44,6 @@ JavaScript Libraries
 
 * [pkzo.js](https://github.com/rioki/pkzo.js)
   WebGL Scene Graph
-
 * [node-thumber](https://github.com/rioki/node-thumper)
   A thumbnail generator.
 

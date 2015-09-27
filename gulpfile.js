@@ -254,13 +254,7 @@ gulp.task('tags', ['posts'], function () {
         .pipe(gulp.dest('build/tag'));
 });
 
-gulp.task('rss', ['posts'], function () {
-  return dummy('atom.xml')
-    .pipe(applyTemplate('templates/atom.xml'))
-    .pipe(gulp.dest('build/'));
-});
-
-gulp.task('default', ['assets', 'pages', 'media', 'posts', 'index', 'archive', 'tags', 'rss']);
+gulp.task('default', ['assets', 'pages', 'media', 'posts', 'index', 'archive', 'tags']);
 
 // quickfix for yeehaa's gulp step (TODO build a sane gulp step)
 gulp.task('test', ['default']);
@@ -274,7 +268,7 @@ gulp.task('watch', ['default'], function () {
   gulp.watch(['assets/**/*'], ['assets']);
   gulp.watch(['content/media'], ['media'])
   gulp.watch(['templates/page.html','content/pages/*.md'], ['pages']);
-  gulp.watch(['templates/post.html', 'templates/index.html', 'templates/journal.html','content/posts/*.md'], ['posts', 'index', 'archive', 'tags', 'rss']);
+  gulp.watch(['templates/post.html', 'templates/index.html', 'templates/journal.html','content/posts/*.md'], ['posts', 'index', 'archive', 'tags']);
   
   var app = connect()
     .use(connect.static('build'))

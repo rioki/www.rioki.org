@@ -1,14 +1,6 @@
-{% set page.title = "Rioki's Corner" %}
-{% set page.nav = "home" %}
+{% set page.title = "Home" %}
 {% extends 'default.html' %}
 {% block content %}
-<div class="jumbotron">
-  <h1>{{ page.title }}</h1>
-  <p>Programming and other nonsense.<p>
-</div>
-  
-<article>
-<!-- TODO limit 3 -->
 {% for post in site.posts %}
   {% if loop.index < 4 %}
     <h2>{{post.title}}</h2>
@@ -22,10 +14,9 @@
         {{ post.summary|safe }}        
     </p>    
     <p class="pull-right">
-      <a href="{{ post.url }}" class="btn btn-primary">read more</a>    
+      <a href="{{ post.url }}">read more</a>    
     </p>
     <div class="clearfix"></div>  
   {% endif %}      
 {% endfor %}
-</article>
 {% endblock %}
