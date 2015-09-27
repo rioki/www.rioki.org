@@ -1,12 +1,12 @@
-box: wercker/node
+box: node
 build:
   steps:
-    - wercker/npm-install
+    - npm-install
     - hgen/gulp:
         tasks: default
 deploy:
   steps:
-    - wercker/s3sync:
+    - s3sync:
         key_id: $KEY
         key_secret: $SECRET
         bucket_url: $URL
