@@ -256,9 +256,6 @@ gulp.task('tags', ['posts'], function () {
 
 gulp.task('default', ['assets', 'pages', 'media', 'posts', 'index', 'archive', 'tags']);
 
-// quickfix for yeehaa's gulp step (TODO build a sane gulp step)
-gulp.task('test', ['default']);
-
 gulp.task('clean', function() {
   return gulp.src('build', {read: false})
     .pipe(clean());
