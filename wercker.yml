@@ -3,11 +3,11 @@ build:
   steps:
     - npm-install
     - hgen/gulp:
-      tasks: default
+        tasks: default
 deploy:
   steps:
     - s3sync:
-      key_id: $KEY
-      key_secret: $SECRET
-      bucket_url: $URL
-      source_dir: build
+        key_id: $KEY
+        key_secret: $SECRET
+        bucket_url: $URL
+        source_dir: build
