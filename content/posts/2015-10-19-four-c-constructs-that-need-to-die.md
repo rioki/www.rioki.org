@@ -34,6 +34,8 @@ become problematic code. For example, since you are always holding single
 elements, you never know if you are actually holding the root element and 
 can never be sure if you can just delete the element.
 
+<!--more-->
+
 **Good Code:**
 
     std::list<Foo> foos;
