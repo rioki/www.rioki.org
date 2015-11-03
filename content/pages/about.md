@@ -5,7 +5,7 @@ nav: about
 
 Behind the pseudonym "rioki" is Sean Farrell. 
 
-<img src="/media/sean_farrell.jpg" alt="Sean Farrell" align="center" class="img-responsive" />
+<img src="/media/sean_farrell.jpg" alt="Sean Farrell" align="left" class="img-responsive" />
 
 Sean Farrell is an information technology engineer (Dipl. Ing. Informationstechnik) and is currently working 
 for [Siemens][1] in Karlsruhe Germany. He has worked on [Simatic PDM][2], [WinCC][3] and [PCS7 Engineeing][4] 
