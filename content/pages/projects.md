@@ -52,6 +52,6 @@ Websites
 --------
 
 * [fedz.me](http://fedz.me)
-  A RSS scanner.
+  The antisocial network.
 * [www.rioki.org](http://www.rioki.org)
   This blog.
