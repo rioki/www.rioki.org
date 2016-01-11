@@ -12,11 +12,14 @@ Games
 
 * [nlc](http://nlc.rioki.org)
   A game about launching nukes, maybe.  
-* [DaBoom!](/daboom.html)
-  A bomberman clone that works over the network.   
 * [d16](http://github.com/rioki/d16)
   DCPU-16 assembler and simulator for 0x10c
 
+C Libraries
+-----------
+* [glt](https://github.com/rioki/glt)
+  OpenGL Transformation Library
+  
 C++ Libraries
 -------------
 
