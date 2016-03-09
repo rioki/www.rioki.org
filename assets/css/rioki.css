@@ -122,6 +122,8 @@ article p {
 
 article img {
     max-width: 100%;
+    display: block;
+    margin: 5px auto;    
 }
 
 article ul {
@@ -161,6 +163,10 @@ article .clearfix {
 
 article .text-muted {
     color: silver;
+}
+
+article .center {
+    text-align: center;
 }
 
 article pre {
