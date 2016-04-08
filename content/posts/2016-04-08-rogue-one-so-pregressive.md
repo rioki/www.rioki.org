@@ -5,6 +5,8 @@ tags:
   - 
 ---
 
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 <div class="videoWrapper">
     <iframe src="https://www.youtube.com/embed/Wji-BZ0oCwg" frameborder="0" allowfullscreen></iframe>
 </div>    
@@ -53,5 +55,4 @@ The cognitive dissonance is strong in these people.
 [2]: http://www.imdb.com/title/tt0076759/
 [3]: https://en.wikipedia.org/wiki/Bechdel_test
 
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
