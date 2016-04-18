@@ -1,5 +1,5 @@
 ---
-title: "Recursive Decent Parser"
+title: "Recursive Descent Parser"
 tags:
   - parser
   - cplusplus
@@ -8,9 +8,9 @@ tags:
 
 Generally I advise people who write parsers to use parser generation tools 
 such as [bison] and [flex]. But with small languages it may be advisable 
-to write your own recursive decent parser. 
+to write your own recursive descent parser. 
 
-To illustrate how to write a recursive decent parser, I will show you around 
+To illustrate how to write a recursive descent parser, I will show you around 
 a parser I wrote a while ago for INI style configuration files. The parser
 in question is the parse for the [cfg] library: 
 
@@ -487,9 +487,9 @@ rule.)
     
 The `parse_section` function simple delegates it's processing to the 
 `parse_section_header` and `parse_value_pair` functions. Here you can
-see the look ahead in action to make a parsing decision. That is as long
+see the look ahead in action to make a parsing decision. As long
 as the parser sees either a new line (empty line) or an identifier (key value pair)
-it continues executing the values loop. As you can the the values rule it 
+it continues executing the values loop. As you can seem the the values rule is
 implicitly coded here. If you really like, you can follow the grammar more 
 closely and wrap it into a function; but I tend to take a pragmatic approach. 
 (Also, I defined the exact grammar a posteriori.)
@@ -605,7 +605,7 @@ format is so simple and should be correct a single error is sufficient.
 Conclusion
 ----------
 
-Writing recursive decent parser is quite simple for simple formats and is way
+Writing recursive descent parser is quite simple for simple formats and is way
 less daunting than trying to work with bison and flex (or any other parser 
 generator). 
   
