@@ -206,3 +206,7 @@ footer, .push {
     margin: 0.5em 0;
     border-radius: 10px;
 }
+
+article code {
+    font-family: monospace;
+}
