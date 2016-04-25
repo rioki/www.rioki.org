@@ -15,7 +15,7 @@ var http        = require('http');
 var site  = require('./site.json');
 site.time = new Date();
 
-swig.setDefaults({ 
+swig.setDefaults({
     loader: swig.loaders.fs(__dirname + '/templates'),
     cache: false
 });
@@ -23,12 +23,12 @@ swig.setDefaults({
 var rePostName   = /(\d{4})-(\d{1,2})-(\d{1,2})-(.*)/;
 
 function collectPosts() {
-    var posts = [];       
+    var posts = [];
     var tags = [];
     return through.obj(function (file, enc, cb) {
         posts.push(file.page);
         posts[posts.length - 1].content = file.contents.toString();
-        
+
         if (file.page.tags) {
             file.page.tags.forEach(function (tag) {
                 if (tags.indexOf(tag) == -1) {
@@ -36,7 +36,7 @@ function collectPosts() {
                 }
             });
         }
-        
+
         this.push(file);
         cb();
     },
@@ -45,32 +45,31 @@ function collectPosts() {
             return b.date - a.date;
         });
         site.posts = posts;
-        site.tags = tags;
         cb();
     });
 }
 
 function filename2date() {
-    return through.obj(function (file, enc, cb) {                
+    return through.obj(function (file, enc, cb) {
         var basename = path.basename(file.path, '.md');
         var match = rePostName.exec(basename);
         if (match)
         {
-            var year     = match[1];            
+            var year     = match[1];
             var month    = match[2];
             var day      = match[3];
             var basename = match[4];
             file.page.date = new Date(year + "-" + month + "-" + day);
             file.page.url  = '/' + year + '/' + month + '/' + day + '/' + basename + '.html';
         }
-        
+
         this.push(file);
         cb();
     });
 }
 
 function summarize(marker) {
-    return through.obj(function (file, enc, cb) {                
+    return through.obj(function (file, enc, cb) {
         var summary = file.contents.toString().split(marker)[0]
         file.page.summary = summary;
         this.push(file);
@@ -80,13 +79,13 @@ function summarize(marker) {
 
 function applyTemplate(templateFile) {
     var tpl = swig.compileFile(path.join(__dirname, templateFile));
-    
-    return through.obj(function (file, enc, cb) {            
+
+    return through.obj(function (file, enc, cb) {
         var data = {
             site: site,
             page: file.page,
             content: file.contents.toString()
-        };            
+        };
         file.contents = new Buffer(tpl(data), 'utf8');
         this.push(file);
         cb();
@@ -94,12 +93,12 @@ function applyTemplate(templateFile) {
 }
 
 gulp.task('assets', function () {
-    return gulp.src('assets/**/*')        
+    return gulp.src('assets/**/*')
         .pipe(gulp.dest('build/'));
 });
 
 gulp.task('media', function () {
-    return gulp.src('content/media/**/*')        
+    return gulp.src('content/media/**/*')
         .pipe(gulp.dest('build/media'));
 });
 
@@ -114,7 +113,7 @@ gulp.task('pages', function () {
 
 gulp.task('posts', function () {
     return gulp.src('content/posts/*.md')
-        .pipe(frontMatter({property: 'page', remove: true}))        
+        .pipe(frontMatter({property: 'page', remove: true}))
         .pipe(marked())
         .pipe(summarize('<!--more-->'))
         .pipe(filename2date())
@@ -125,13 +124,13 @@ gulp.task('posts', function () {
             var match = rePostName.exec(path.basename);
             if (match)
             {
-                var year = match[1];            
+                var year = match[1];
                 var month = match[2];
                 var day = match[3];
-            
+
                 path.dirname = year + '/' + month + '/' + day;
                 path.basename = match[4];
-            }            
+            }
         }))
         .pipe(gulp.dest('build'));
 });
@@ -141,20 +140,20 @@ function dummy(file) {
 		this.push(file);
 		cb();
 	});
-    
+
   if (site)
   {
     var file = new gutil.File({
       path: file,
       contents: new Buffer('')
     });
-    file.page = {}        
-    stream.write(file);        
+    file.page = {}
+    stream.write(file);
   }
-  
+
   stream.end();
   stream.emit("end");
-  
+
   return stream;
 }
 
@@ -169,7 +168,7 @@ function posts(basename, count) {
 		this.push(file);
 		cb();
 	});
-    
+
   if (site.posts)
   {
     var c     = 0;
@@ -178,42 +177,42 @@ function posts(basename, count) {
     site.posts.forEach(function (post) {
       posts.push(post);
       c++;
-      if (c == count) {        
+      if (c == count) {
         var file = new gutil.File({
           path: basename + (page == 0 ? '' : page) + '.html',
           contents: new Buffer('')
         });
         console.log('page=' + page + ' c=' + c + ' posts.length=' + site.posts.length);
         file.page = {
-          posts: posts, 
+          posts: posts,
           prevPage: page != 0 ? basename + ((page-1) == 0 ? '' : page-1) + '.html' : null,
           nextPage: (page+1) * count < site.posts.length ? basename + (page+1) + '.html' : null,
           };
         stream.write(file);
-        
+
         c = 0;
         posts = [];
         page++;
       }
-    });   
-    
+    });
+
     if (posts.length != 0) {
       var file = new gutil.File({
         path: basename + (page == 0 ? '' : page) + '.html',
         contents: new Buffer('')
       });
       file.page = {
-        posts: posts, 
+        posts: posts,
         prevPage: page != 0 ? basename + ((page-1) == 0 ? '' : page) + '.html' : null,
         nextPage: null,
         };
       stream.write(file);
     }
   }
-  
+
   stream.end();
   stream.emit("end");
-  
+
   return stream;
 }
 
@@ -223,38 +222,19 @@ gulp.task('archive', ['posts'], function () {
         .pipe(gulp.dest('build/'));
 });
 
-function tags() {    
+function tags() {
   var stream = through.obj(function(file, enc, cb) {
 		this.push(file);
 		cb();
 	});
-    
-  if (site.tags)
-  {
-    site.tags.forEach(function (tag) {
-      var file = new gutil.File({
-        path: tag + '.html',
-        contents: new Buffer('')
-      });
-      file.page = {title: tag, tag: tag}
-            
-      stream.write(file);        
-    });
-  }
-  
+
   stream.end();
   stream.emit("end");
-  
+
   return stream;
 }
 
-gulp.task('tags', ['posts'], function () {
-    return tags()
-        .pipe(applyTemplate('templates/tag.html'))
-        .pipe(gulp.dest('build/tag'));
-});
-
-gulp.task('default', ['assets', 'pages', 'media', 'posts', 'index', 'archive', 'tags']);
+gulp.task('default', ['assets', 'pages', 'media', 'posts', 'index', 'archive']);
 
 gulp.task('clean', function() {
   return gulp.src('build', {read: false})
@@ -265,11 +245,11 @@ gulp.task('watch', ['default'], function () {
   gulp.watch(['assets/**/*'], ['assets']);
   gulp.watch(['content/media'], ['media'])
   gulp.watch(['templates/page.html','content/pages/*.md'], ['pages']);
-  gulp.watch(['templates/post.html', 'templates/index.html', 'templates/journal.html','content/posts/*.md'], ['posts', 'index', 'archive', 'tags']);
-  
+  gulp.watch(['templates/post.html', 'templates/index.html', 'templates/journal.html','content/posts/*.md'], ['posts', 'index', 'archive']);
+
   var app = connect()
     .use(connect.static('build'))
     .use(connect.directory('build'));
-  
+
   http.createServer(app).listen(3000);
 });
