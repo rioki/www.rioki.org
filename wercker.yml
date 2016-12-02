@@ -2,7 +2,7 @@ box: node
 build:
   steps:
     - npm-install
-    - hgen/gulp:
+    - austenlacy/gulp:
         tasks: default
 deploy:
   steps:
