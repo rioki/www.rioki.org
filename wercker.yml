@@ -1,7 +1,7 @@
-box: node
+box: wercker/nodejs
 build:
   steps:
-    - npm-install
+    - wercker/npm-install
     - austenlacy/gulp:
         tasks: default
 deploy:
