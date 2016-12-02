@@ -1,4 +1,4 @@
-box: nodejs
+box: koding/base
 build:
   steps:
     - wercker/npm-install
