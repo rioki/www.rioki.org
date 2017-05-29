@@ -2,7 +2,6 @@
 var gulp        = require('gulp');
 var frontMatter = require('gulp-front-matter');
 var marked      = require('gulp-marked');
-var minifyHtml  = require('gulp-minify-html');
 var rename      = require('gulp-rename');
 var clean       = require('gulp-clean');
 var gutil       = require('gulp-util');
