@@ -14,6 +14,8 @@ Games
   A game about launching nukes, maybe.  
 * [d16](http://github.com/rioki/d16)
   DCPU-16 assembler and simulator for 0x10c
+* [DaBoom](/daboom.html)
+  A bomb laying game.
 
 C Libraries
 -----------
@@ -29,6 +31,8 @@ C++ Libraries
   A JSON parser for C++ that builds ontop of standard c++.
 * [pkzo](https://github.com/rioki/pkzo)
   Presentation layer framework for 3D graphic applications. 
+* [glow](https://github.com/rioki/glow)
+	Open GL Object Wrapper
 * [spdr](https://github.com/rioki/spdr)
   A networking abstraction layer. 
 * [rgm](https://github.com/rioki/rgm)
@@ -54,7 +58,16 @@ JavaScript Libraries
 Websites
 --------
 
-* [fedz.me](http://fedz.me)
-  The antisocial network.
 * [www.rioki.org](http://www.rioki.org)
   This blog.
+* [victoria-benner.de](http://www.victoria-benner.de/)
+  Designed the Tumblr template.
+
+Copy Editing
+------------
+
+Design and layout of the following books:
+
+* [Schattensprung](https://www.amazon.de/Lotte-Schattensprung-Victoria-Benner/dp/3737572259/)
+* [Wiedersehen in Berlin](https://www.amazon.de/Lotte-Wiedersehen-Berlin-Victoria-Benner/dp/3737587752)
+* [Lotte in London](https://www.amazon.de/gp/product/3745030893)

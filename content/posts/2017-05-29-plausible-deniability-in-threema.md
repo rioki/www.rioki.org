@@ -6,7 +6,7 @@ title: "Plausible Deniability in Threema"
 plausible deniability. The hidden chat feature must be implemented in a way 
 that allows the user to plausibly deny that the a private chat actually exists, 
 up to the point to unlock the application and “prove” it.
- 
+
 In the current implementation of threema, the following problems exist:
  
 **Problem 1: One Passcode**
@@ -20,7 +20,9 @@ once revealed basically renders the remaining safeguards null.
 The “Show Private Chats” divulges the current state of the application. First 
 this user interface element is only visible when there are private chats. This 
 leaks the information that there is more to get. 
- 
+
+<!--more-->
+
 **Problem 3: Contact List Leaks Information**
  
 When private chats are hidden, you can find out with which contacts private 
