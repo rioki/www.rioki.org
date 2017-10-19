@@ -5,9 +5,9 @@ title:  Imprint
 For the content of this website is legally responsible:
 
     Sean Farrell
-    Durlacher Allee 35
-    76131 Karlsruhe
-	Germany
+    1205-1500 Hornby Street
+    Vancouver BC V6Z 2R1
+	Cananda
     
 If you want to contact me via email, email me at [sean.farrell@rioki.org][6].
 

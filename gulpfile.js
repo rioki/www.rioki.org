@@ -8,8 +8,7 @@ var gutil       = require('gulp-util');
 var path        = require('path');
 var swig        = require('swig');
 var through     = require('through2');
-var connect     = require('connect');
-var http        = require('http');
+var StaticServer = require('static-server');
 
 var site  = require('./site.json');
 site.time = new Date();
@@ -246,9 +245,12 @@ gulp.task('watch', ['default'], function () {
   gulp.watch(['templates/page.html','content/pages/*.md'], ['pages']);
   gulp.watch(['templates/post.html', 'templates/index.html', 'templates/journal.html','content/posts/*.md'], ['posts', 'index', 'archive']);
 
-  var app = connect()
-    .use(connect.static('build'))
-    .use(connect.directory('build'));
+  var server = new StaticServer({
+    rootPath: 'build',         
+    port: 8080,
+  });
 
-  http.createServer(app).listen(3000);
+  server.start(function () {
+    console.log('Server listening to', server.port);
+  });
 });
