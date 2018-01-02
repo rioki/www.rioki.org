@@ -13,6 +13,10 @@
   "license": "UNLICENSED",
   "private": "true",
   "homepage": "http://www.rioki.org",
+  "scripts": {
+    "build": "gulp",
+    "dev": "gulp watch"
+  },
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
