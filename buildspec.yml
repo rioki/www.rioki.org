@@ -1,0 +1,34 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - echo INSTALL started on `date`
+      - npm install gulp -g
+      - npm install
+      - echo INSTALL completed on `date`
+  pre_build:
+    commands:
+      - echo PRE_BUILD started on `date`
+      - echo `pwd`
+      - node -v
+      - npm -v
+      - gulp -v
+      - which gulp
+      - echo PRE_BUILD completed on `date`
+  build:
+    commands:
+      - echo BUILD started on `date`
+      - echo `pwd`
+      - which gulp
+      - gulp
+      - echo BUILD completed on `date`
+  post_build:
+    commands:
+      - echo POST_BUILD started on `date`
+      - echo `pwd`
+      - rm -rf node_modules      
+      - echo POST_BUILD completed on `date`
+artifacts:
+  files:
+    - /build/**/*
