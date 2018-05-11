@@ -31,4 +31,4 @@ phases:
       - echo POST_BUILD completed on `date`
 artifacts:
   files:
-    - /build/**/*
+    - build/**/*
