@@ -30,5 +30,6 @@ phases:
       - rm -rf node_modules      
       - echo POST_BUILD completed on `date`
 artifacts:
-  files:
-    - build/**/*
+  files: 
+    - '**/*'
+  base-directory: 'build'
