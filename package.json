@@ -15,6 +15,7 @@
   "homepage": "http://www.rioki.org",
   "scripts": {
     "build": "gulp",
+    "clean": "gulp clean",
     "start": "gulp start"
   },
   "dependencies": {

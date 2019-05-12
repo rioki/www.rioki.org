@@ -5,30 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} - {{ site.title }}</title>
     <meta name="author" content="{{ site.author }}" />
-    <link href="/css/reset.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" rel="stylesheet">
     <link href="/css/rioki.css" rel="stylesheet">    
   </head>
   <body> 
-    <div class="wrapper">
-      <nav>      
-        <div id="brand"><a href="/">{{ site.title }}</a></div>
-        <div id="menu">
+    <div class="container">
+      <nav class="row">      
+        <div id="brand" class="one-half column"><a href="/">{{ site.title }}</a></div>
+        <div id="menu" class="one-half column">
           <a href="/journal.html">Journal</a>
           <a href="/projects.html">Projects</a>
-          <a href="/about.html">About</a>
         </div>        
       </nav>
-      <div id="eye-catcher"></div>
       <article>
         {% block content %}{% endblock %}
-      </article>
-      <div class="push"></div>
-    </div>    
-    <footer>
-      &copy;2009 - 2018 Sean "rioki" Farrell | <a href="/imprint.html">Imprint</a> | 
-      This blog is the personal opinion of Sean "rioki" Farrell and does not constitute an opinion or position by my employer.
-    </footer>    
-    
+      </article>      
+      <footer>
+        &copy;2009 - 2019 Sean "rioki" Farrell | <a href="/imprint.html">Imprint</a> | 
+        This blog is the personal opinion of Sean "rioki" Farrell and does not constitute an opinion or position by my employer.
+      </footer>    
+    </div> 
+
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-3244789-10']);

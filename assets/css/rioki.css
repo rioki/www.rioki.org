@@ -1,40 +1,6 @@
 
-/* Junge Regular.ttf */
-@font-face {
-    font-family: 'jungeregular';
-    src: url('../fonts/junge-regular-webfont.eot');
-    src: url('../fonts/junge-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/junge-regular-webfont.woff2') format('woff2'),
-         url('../fonts/junge-regular-webfont.woff') format('woff'),
-         url('../fonts/junge-regular-webfont.ttf') format('truetype'),
-         url('../fonts/junge-regular-webfont.svg#jungeregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'monospace';
-    src: url('../fonts/monospace-webfont.eot');
-    src: url('../fonts/monospace-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/monospace-webfont.woff2') format('woff2'),
-         url('../fonts/monospace-webfont.woff') format('woff'),
-         url('../fonts/monospace-webfont.ttf') format('truetype'),
-         url('../fonts/monospace-webfont.svg#monospacemedium') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-html, body {
-    height: 100%;
-}
-
-body {
-    font-family: jungeregular;
-    background: radial-gradient(ellipse at center, #ffffff 0%,#f6f6f6 47%,#d6d6d6 100%);
-    padding: 0 2em;
-}
-
-a {
+/* typography */
+a, a:hover, a:visited {
     color: orange;
     text-decoration: none;
     font-weight: bold;
@@ -48,165 +14,42 @@ strong {
     font-weight: bold;
 }
 
-nav {
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 1em 0;
-    height: 2em;
+code {
+    font-family: monospace;
+    background-color: silver;
 }
 
-@media (min-width: 500px) { 
-    nav #brand {
-        float: left;
-    }
+/* special designs */
+
+#brand {
+    font-size: 300%;
 }
 
-nav #brand {
-    font-size: 150%;
-    white-space: nowrap;
-}
-
-nav #brand a {
+#brand a {
     color: silver;
-    text-decoration: none;
+    font-weight: lighter;
 }
 
-@media (min-width: 500px) { 
-    nav #menu {
-        float: right;
-    }
-}
-
-@media (max-width: 500px) { 
-    nav #menu {
-        padding: 0.2em 0;
-    }
-}
-
-#eye-catcher {
-    background-image: url('../img/EyeCatcher.jpg');
-    height: 6em;
-    opacity: 0.75;
-}
-
-article {
-    max-width: 640px;
-    margin: 0 auto;
-}
-
-article h1 {
+#menu {
     font-size: 150%;
-    font-weight: bold;
-    padding-top: 1em;
-    padding-bottom: 0.5em;
+    text-align: right;
+    vertical-align: text-bottom;
 }
 
-article h2 {
-    font-size: 120%;
-    font-weight: bold;
-    padding-top: 0.5em;
-    padding-bottom: 0.2em;
+#menu a {
+    font-weight: lighter;
 }
 
-article h3 {
-    font-weight: bold;
-    padding-top: 0.5em;
-    padding-bottom: 0.2em;
-}
-
-article p {
-   text-align: justify;
-   padding: 0.3em 0;
-   line-height: 120%;
-}
-
-article img {
-    max-width: 100%;
-    display: block;
-    margin: 5px auto;    
-}
-
-article ul {
-    list-style-type: disc;
-    list-style-position: inside;
-}
-
-article ul li {
-    line-height: 120%;
-}
-
-article .videoWrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-}
-article .videoWrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-article .pull-right {
-    float: right;
-}
-
-article .pull-left {
-    float: left;
-}
-
-article .clearfix {
+footer {
     clear: both;
-}
-
-article .text-muted {
     color: silver;
 }
 
-article .center {
-    text-align: center;
+.text-muted {
+    color: silver;
 }
 
-article pre {
-    font-family: monospace;
-    background: #DEDEDE;
-    padding: 1em;
-    overflow: auto;
-}
-
-footer {    
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 1em 0;
-    height: 2em;
-    font-size: 90%;
-    border-top: 1px solid silver;
-}
-
-.wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -4em;
-}
-
-.push {
+/* fixes */
+h1, h2, h3 {
     clear: both;
-}
-
-footer, .push {
-    height: 4em;
-}
-
-.button {
-    padding: 0.5em;
-    background: #DEDEDE;
-    margin: 0.5em 0;
-    border-radius: 10px;
-}
-
-article code {
-    font-family: monospace;
 }
