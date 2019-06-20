@@ -93,7 +93,7 @@ of modern media try to "sell" some kind of narrative and influence it's
 audience. The ones where it is obvious are just badly executed. 
 
 And it is no wonder that a movie about the worst civilian nuclear incident is 
-released in the year that acceptance has just tiled back favoring nuclear power.
+released in the year that acceptance has just tilted back favoring nuclear power.
 
 <div class="center">
 <a href="http://world-nuclear-news.org/Articles/US-public-opinion-evenly-split-on-nuclear">
