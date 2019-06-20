@@ -8,7 +8,7 @@ title: "Modern Propaganda"
 
 I recently got into an argument, by clamming that the new HBO mini series 
 Chernobyl was modern propaganda. The counter was, I could not evaluate this
-since I had not yet seen it. I seems really interesting and well made,
+since I had not yet seen it. The series seems really interesting and well made,
 and I just have not yet found a legal way to watch it in Germany.
 But I assert, that this dramatized not quite documentary is propaganda, even 
 if they remain true to the real events and facts. I give Chernobyl the benefit 
