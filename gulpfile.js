@@ -9,6 +9,7 @@ var path        = require('path');
 var swig        = require('swig');
 var through     = require('through2');
 var connect     = require('gulp-connect');
+var awspublish  = require("gulp-awspublish");
 
 var site  = require('./site.json');
 site.time = new Date();
@@ -259,5 +260,30 @@ gulp.task('connect', function(cb) {
   cb()
 });
 
+gulp.task("upload", function() {
+  var publisher = awspublish.create(
+    {
+      region: "eu-central-1",
+      params: {
+        Bucket: "www.rioki.org"
+      }
+    },
+    {
+      cacheFileName: "upload-cache"
+    }
+  );
+ 
+  var headers = {
+    "Cache-Control": "max-age=315360000, no-transform, public"
+  };
+ 
+  return gulp.src("./build/**/*")
+      //.pipe(awspublish.gzip({ ext: ".gz" }))
+      .pipe(publisher.publish(headers))
+      .pipe(publisher.cache())
+      .pipe(awspublish.reporter());
+});
+
 gulp.task('default', gulp.series('assets', 'pages', 'media', 'posts', 'index', 'archive'));
 gulp.task('start', gulp.series('default', 'connect', 'watch'));
+gulp.task('publish', gulp.series('clean', 'default', 'upload'));

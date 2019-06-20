@@ -53,3 +53,87 @@ footer {
 h1, h2, h3 {
     clear: both;
 }
+
+article img {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+    height: 0;
+    margin-bottom: 2em;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+    height: 100%;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+@media (min-width: 500px) { 
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width: 75%;
+    }
+    .pull-left {
+        float: left;
+        margin-right: 1em;
+    }
+
+    .pull-right {
+        float: right;
+        margin-left: 1em;
+    }
+}
+
+@media (max-width: 500px) { 
+    .center {
+    }
+
+    .pull-left {
+    }
+
+    .pull-right {
+    }
+}
+
+blockquote {
+    background: #f9f9f9;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    font-style: italic;
+}
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+blockquote:after {
+    color: #ccc;
+    content: close-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+blockquote p {
+    display: inline;
+}
