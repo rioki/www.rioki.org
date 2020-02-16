@@ -71,11 +71,11 @@ events after the death of Diana. Although somewhat critical, the movie tries to
 humanize the Queen. Although her official appearance is quite cold and reserved,
 the movie hints at her being a loving grandmother that tries to ease the pain
 for her two grandchildren, the two princes William and Harry. Her seeming lack of
-\empathy comes from the fact that she born in a different era, one where 
+empathy comes from the fact that she born in a different era, one where 
 you just did not publicly show emotions.
 
 Because the movie is rather intimate, there is no way of knowing if anything in 
-the movie is anything close to teh through. But the movie is sufficiently 
+the movie is close to the truth. But the movie is sufficiently 
 critical and plausible that we can assume that in general terms it is accurate. 
 
 An that is the key trick here, the content is plausible and that opens us to 
@@ -85,7 +85,7 @@ in Britain around 1990, about half wanted to get rid of the monarchy.
 
 Did it work? I don't want to claim that this movie was the sole influence, but
 there is a clear uptick in favor for the queen in recent years. Unfortunately 
-my after all of the 5 minutes of research I could not find any good numbers 
+after all of the 5 minutes of research I could not find any good numbers 
 that would allow a before and after comparison. 
 
 I would say, with the exception of totally escapist fiction, almost all pieces 

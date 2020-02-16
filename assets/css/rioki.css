@@ -80,6 +80,14 @@ iframe {
     max-width: 100%;
 }
 
+.u-center {
+    text-align: center;
+}
+
+.bg-orange {
+    background-color: orange;
+}
+
 @media (min-width: 500px) { 
     .center {
         display: block;
