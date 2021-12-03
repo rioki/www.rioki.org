@@ -1,4 +1,3 @@
-{% set page.title = "Journal" %}
 {% extends 'default.html' %}
 {% block content %}
 {% if page.prevPage %}
@@ -13,7 +12,7 @@
   <p class="text-muted u-pull-rightt">{{ post.date|date('Y-m-d') }}</p>
   <p class="clear">&nbsp;</p>
   <p>
-      {{ post.summary|safe }}
+      {{ post.summary }}
   </p>
   <p class="pull-right">
     <a href="{{ post.url }}" class="btn btn-primary">read more</a>

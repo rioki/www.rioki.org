@@ -1,193 +1,118 @@
-
-var gulp        = require('gulp');
-var frontMatter = require('gulp-front-matter');
-var marked      = require('gulp-marked');
-var rename      = require('gulp-rename');
-var clean       = require('gulp-clean');
-var gutil       = require('gulp-util');
-var path        = require('path');
-var swig        = require('swig');
-var through     = require('through2');
-var connect     = require('gulp-connect');
-var awspublish  = require("gulp-awspublish");
+const path                          = require('path')
+const {series, parallel, src, dest} = require('gulp')
+const clean                         = require('gulp-clean')
+const rename                        = require('gulp-rename')
+const marked                        = require('gulp-marked')
+var   gulpUtil                      = require('gulp-util');
+const frontMatter                   = require('gulp-front-matter')
+const through2                      = require('through2')
+const twig                          = require('twig')
 
 var site  = require('./site.json');
 site.time = new Date();
 
-swig.setDefaults({
-    loader: swig.loaders.fs(__dirname + '/templates'),
-    cache: false
-});
-
-var rePostName   = /(\d{4})-(\d{1,2})-(\d{1,2})-(.*)/;
-
-function collectPosts() {
-    var posts = [];
-    var tags = [];
-    return through.obj(function (file, enc, cb) {
-        posts.push(file.page);
-        posts[posts.length - 1].content = file.contents.toString();
-
-        if (file.page.tags) {
-            file.page.tags.forEach(function (tag) {
-                if (tags.indexOf(tag) == -1) {
-                    tags.push(tag);
-                }
-            });
+function applyTemplate(templateFile) {
+  const tplFile = path.join(__dirname, templateFile)
+  return through2.obj(function (file, enc, cb) {
+      var data = {
+          site: site,
+          page: file.page,
+          content: file.contents.toString()
+      };
+      twig.renderFile(tplFile, data, function(err, html) {
+        if (err === null) {
+          file.contents = Buffer.from(html, 'utf8')
         }
-
-        this.push(file);
-        cb();
-    },
-    function (cb) {
-        posts.sort(function (a, b) {
-            return b.date - a.date;
-        });
-        site.posts = posts;
-        cb();
-    });
-}
-
-function filename2date() {
-    return through.obj(function (file, enc, cb) {
-        var basename = path.basename(file.path, '.md');
-        var match = rePostName.exec(basename);
-        if (match)
-        {
-            var year     = match[1];
-            var month    = match[2];
-            var day      = match[3];
-            var basename = match[4];
-            file.page.date = new Date(year + "-" + month + "-" + day);
-            file.page.url  = '/' + year + '/' + month + '/' + day + '/' + basename;
-        }
-
-        this.push(file);
-        cb();
-    });
+        cb(err, file)
+      })
+  })
 }
 
 function summarize(marker) {
-    return through.obj(function (file, enc, cb) {
-        var summary = file.contents.toString().split(marker)[0]
-        file.page.summary = summary;
-        this.push(file);
-        cb();
-    });
+  return through2.obj(function (file, enc, cb) {
+    const summary = file.contents.toString().split(marker)[0]
+      file.page.summary = summary;
+      cb(null, file);
+  });
 }
 
-function applyTemplate(templateFile) {
-    var tpl = swig.compileFile(path.join(__dirname, templateFile));
+const rePostName   = /(\d{4})-(\d{1,2})-(\d{1,2})-(.*)/;
 
-    return through.obj(function (file, enc, cb) {
-        var data = {
-            site: site,
-            page: file.page,
-            content: file.contents.toString()
-        };
-        file.contents = new Buffer(tpl(data), 'utf8');
-        this.push(file);
-        cb();
-    });
+function filename2date() {
+  return through2.obj(function (file, enc, cb) {
+    const basename = path.basename(file.path, '.md');
+    const match = rePostName.exec(basename);
+    if (match)
+    {
+      const year     = match[1];
+      const month    = match[2];
+      const day      = match[3];
+      const basename = match[4];
+      file.page.date = new Date(year + "-" + month + "-" + day);
+      file.page.url  = '/' + year + '/' + month + '/' + day + '/' + basename;
+    }
+    cb(null, file);
+  });
 }
 
-gulp.task('assets', function () {
-    return gulp.src('assets/**/*')
-        .pipe(gulp.dest('build/'))
-        .pipe(connect.reload());
-});
+function collectPosts() {
+  var posts = [];
+  return through2.obj(function (file, enc, cb) {
+      posts.push(file.page);
+      posts[posts.length - 1].content = file.contents.toString();
+      cb(null, file);
+  },
+  function (cb) {
+      posts.sort(function (a, b) {
+          return b.date - a.date;
+      });
+      site.posts = posts;
+      cb();
+  });
+}
 
-gulp.task('media', function () {
-    return gulp.src('content/media/**/*')
-        .pipe(gulp.dest('build/media'))
-        .pipe(connect.reload());
-});
-
-gulp.task('pages', function () {
-    return gulp.src('content/pages/*.md')
-        .pipe(frontMatter({property: 'page', remove: true}))
-        .pipe(marked())
-        .pipe(applyTemplate('templates/page.html'))
-        .pipe(rename({extname: '.html'}))
-        .pipe(gulp.dest('build'))
-        .pipe(connect.reload());
-});
-
-gulp.task('posts', function () {
-    return gulp.src('content/posts/*.md')
-        .pipe(frontMatter({property: 'page', remove: true}))
-        .pipe(marked())
-        .pipe(summarize('<!--more-->'))
-        .pipe(filename2date())
-        .pipe(collectPosts())
-        .pipe(applyTemplate('templates/post.html'))
-        .pipe(rename(function (path) {
-            path.extname = ".html";
-            var match = rePostName.exec(path.basename);
-            if (match)
-            {
-                var year = match[1];
-                var month = match[2];
-                var day = match[3];
-
-                path.dirname = year + '/' + month + '/' + day;
-                path.basename = match[4];
-            }
-        }))
-        .pipe(gulp.dest('build'))
-        .pipe(connect.reload());
-});
-
-function dummy(file) {
-  var stream = through.obj(function(file, enc, cb) {
-		this.push(file);
-		cb();
-	});
+function dummy(file, title) {
+  var stream = through2.obj(function(file, enc, cb) {
+		cb(null, file);
+	})
 
   if (site)
   {
-    var file = new gutil.File({
+    var file = new gulpUtil.File({
       path: file,
-      contents: new Buffer('')
-    });
-    file.page = {}
+      contents: Buffer.from('', 'utf8')
+    })
+    file.page = {title: title}
     stream.write(file);
   }
 
-  stream.end();
-  stream.emit("end");
+  stream.end()
+  stream.emit("end")
 
-  return stream;
+  return stream
 }
 
-gulp.task('index', function () {
-    return dummy('index.html')
-        .pipe(applyTemplate('templates/index.html'))
-        .pipe(gulp.dest('build/'))
-        .pipe(connect.reload());
-});
-
 function posts(basename, count) {
-  var stream = through.obj(function(file, enc, cb) {
+  const stream = through2.obj(function(file, enc, cb) {
 		this.push(file);
 		cb();
 	});
 
   if (site.posts)
   {
-    var c     = 0;
-    var page  = 0;
-    var posts = [];
+    let c     = 0;
+    let page  = 0;
+    let posts = [];
     site.posts.forEach(function (post) {
       posts.push(post);
       c++;
       if (c == count) {
-        var file = new gutil.File({
+        const file = new gulpUtil.File({
           path: basename + (page == 0 ? '' : page) + '.html',
-          contents: new Buffer('')
+          contents: Buffer.from('', 'utf-8')
         });
-        console.log('page=' + page + ' c=' + c + ' posts.length=' + site.posts.length);
         file.page = {
+          title: 'Journal',
           posts: posts,
           prevPage: page != 0 ? basename + ((page-1) == 0 ? '' : page-1) + '.html' : null,
           nextPage: (page+1) * count < site.posts.length ? basename + (page+1) + '.html' : null,
@@ -201,9 +126,9 @@ function posts(basename, count) {
     });
 
     if (posts.length != 0) {
-      var file = new gutil.File({
+      const file = new gulpUtil.File({
         path: basename + (page == 0 ? '' : page) + '.html',
-        contents: new Buffer('')
+        contents: Buffer.from('', 'utf-8')
       });
       file.page = {
         posts: posts,
@@ -220,70 +145,65 @@ function posts(basename, count) {
   return stream;
 }
 
-gulp.task('archive', function () {
-    return posts('journal', 10)
-        .pipe(applyTemplate('templates/journal.html'))
-        .pipe(gulp.dest('build/'))
-        .pipe(connect.reload());
-});
-
-function tags() {
-  var stream = through.obj(function(file, enc, cb) {
-		this.push(file);
-		cb();
-	});
-
-  stream.end();
-  stream.emit("end");
-
-  return stream;
+function cleanTask() {
+  return src('build', {read: false, allowEmpty: true})
+    .pipe(gulpClean())
 }
 
-gulp.task('clean', function() {
-  return gulp.src('build', {read: false})
-    .pipe(clean());
-});
+function assetsTask() {
+  return src('assets/**/*')
+    .pipe(dest('build/'))
+}
 
-gulp.task('watch', function (cb) {
-  gulp.watch(['assets/**/*'], gulp.series('assets'));
-  gulp.watch(['content/media'], gulp.series('media'));
-  gulp.watch(['templates/*.html','content/pages/*.md'], gulp.series('pages'));
-  gulp.watch(['templates/*.html', 'content/posts/*.md'], gulp.series('posts', 'index', 'archive'));
-  cb();
-});
+function mediaTask() {
+  return src('content/media/**/*')
+    .pipe(dest('build/media'))
+}
 
-gulp.task('connect', function(cb) {
-  connect.server({
-    root: 'build',
-    livereload: true
-  });
-  cb()
-});
+function pagesTask() {
+  return src('content/pages/*.md')
+      .pipe(frontMatter({property: 'page', remove: true}))
+      .pipe(marked())
+      .pipe(applyTemplate('templates/page.html'))
+      .pipe(rename({extname: '.html'}))
+      .pipe(dest('build'))
+}
 
-gulp.task("upload", function() {
-  var publisher = awspublish.create(
-    {
-      region: "eu-central-1",
-      params: {
-        Bucket: "www.rioki.org"
-      }
-    },
-    {
-      cacheFileName: "upload-cache"
-    }
-  );
- 
-  var headers = {
-    "Cache-Control": "max-age=315360000, no-transform, public"
-  };
- 
-  return gulp.src("./build/**/*")
-      //.pipe(awspublish.gzip({ ext: ".gz" }))
-      .pipe(publisher.publish(headers))
-      .pipe(publisher.cache())
-      .pipe(awspublish.reporter());
-});
+function postsTask() {
+  return src('content/posts/*.md')
+      .pipe(frontMatter({property: 'page', remove: true}))
+      .pipe(marked())
+      .pipe(summarize('<!--more-->'))
+      .pipe(filename2date())
+      .pipe(collectPosts())
+      .pipe(applyTemplate('templates/post.html'))
+      .pipe(rename(function (path) {
+          path.extname = ".html";
+          var match = rePostName.exec(path.basename);
+          if (match)
+          {
+              var year = match[1];
+              var month = match[2];
+              var day = match[3];
 
-gulp.task('default', gulp.series('assets', 'pages', 'media', 'posts', 'index', 'archive'));
-gulp.task('start', gulp.series('default', 'connect', 'watch'));
-gulp.task('publish', gulp.series('clean', 'default', 'upload'));
+              path.dirname = year + '/' + month + '/' + day;
+              path.basename = match[4];
+          }
+      }))
+      .pipe(dest('build'))
+}
+
+function archiveTask() {
+  return posts('journal', 10)
+    .pipe(applyTemplate('templates/journal.html'))
+    .pipe(dest('build/'))
+}
+
+function indexTask() {
+  return dummy('index.html', 'Index')
+    .pipe(applyTemplate('templates/index.html'))
+    .pipe(dest('build/'))
+}
+
+exports.clean = cleanTask
+exports.default = series(parallel(assetsTask, mediaTask, pagesTask, postsTask), parallel(archiveTask, indexTask))
