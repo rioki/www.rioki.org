@@ -28,15 +28,7 @@ the game by its first impression; I liked and played lots of
 
 <!--more-->
 
-<object width="640" height="390">
-  <param name="movie" value="http://www.youtube.com/v/h3jKvPY6fK4?version=3&amp;hl=en_US"></param>
-  <param name="allowFullScreen" value="true"></param>
-  <param name="allowscriptaccess" value="always"></param>
-  <embed src="http://www.youtube.com/v/h3jKvPY6fK4?version=3&amp;hl=en_US" 
-    type="application/x-shockwave-flash" width="640" height="390" 
-    allowscriptaccess="always" allowfullscreen="true">
-  </embed>
-</object>
+<div class="yt-embed" data-video="VgOZubjayME"></div>
 
 The first thing you need to do is choose your culture you want to cultivate.
 At the current time you can chose from the Greek or Egyptian cultures, but

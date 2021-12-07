@@ -1,5 +1,5 @@
 const path                          = require('path')
-const {series, parallel, src, dest} = require('gulp')
+const {series, parallel, src, dest, watch} = require('gulp')
 const clean                         = require('gulp-clean')
 const rename                        = require('gulp-rename')
 const marked                        = require('gulp-marked')
@@ -7,6 +7,8 @@ var   gulpUtil                      = require('gulp-util');
 const frontMatter                   = require('gulp-front-matter')
 const through2                      = require('through2')
 const twig                          = require('twig')
+
+twig.cache = false;
 
 var site  = require('./site.json');
 site.time = new Date();
@@ -205,5 +207,16 @@ function indexTask() {
     .pipe(dest('build/'))
 }
 
-exports.clean = cleanTask
-exports.default = series(parallel(assetsTask, mediaTask, pagesTask, postsTask), parallel(archiveTask, indexTask))
+const buildAll = series(parallel(assetsTask, mediaTask, pagesTask, postsTask), parallel(archiveTask, indexTask))
+
+function watchTask() {
+  watch('assets/**/*',        assetsTask);
+  watch('content/media/**/*', mediaTask);
+  watch('content/pages/*.md', pagesTask);
+  watch('content/posts/*.md', postsTask);
+  watch('templates/*.html',   series(parallel(pagesTask, postsTask), parallel(archiveTask, indexTask)));
+}
+
+exports.clean   = cleanTask
+exports.default = buildAll
+exports.watch   = series(buildAll, watchTask)

@@ -13,7 +13,7 @@ to try out for a long time, [From Dust][1]. It basically all sttlarted with the
 first "Dev Diary" video. A beautyfull landscape molded in real time with reatime
 simulation of water, fire and vegetation. A real technology gem.  
 
-<object width="640" height="360"><param name="movie" value="http://www.youtube.com/v/gJeUz5N3RpQ?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/gJeUz5N3RpQ?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="640" height="360" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+<div class="yt-embed" data-video="gJeUz5N3RpQ" data-thumbnail="https://i.ytimg.com/vi/gJeUz5N3RpQ/sddefault.jpg"></div>
 
 <!--more-->
 

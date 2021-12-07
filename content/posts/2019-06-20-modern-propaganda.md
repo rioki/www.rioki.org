@@ -2,9 +2,7 @@
 title: "Modern Propaganda"
 ---
 
-<div class="center">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/s9APLXM9Ei8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<div class="yt-embed" data-video="s9APLXM9Ei8"></div>
 
 I recently got into an argument, by clamming that the new HBO mini series 
 Chernobyl was modern propaganda. The counter was, I could not evaluate this
@@ -35,13 +33,9 @@ As Wikipedia puts it:
 > material prepared by governments, but activist groups, companies, religious 
 > organizations and the media can also produce propaganda.
 
-<div class="pull-left">
-<iframe width="280" height="158" src="https://www.youtube-nocookie.com/embed/GOnENVylxPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
 But these are the obvious and egregious examples that we have learned to spot. 
 This is the same reason why motivational posters in cooperate environments
-don't work anymore. I doubt that the notorious "This is your brain on drugs" 
+don't work anymore. I doubt that the notorious ["This is your brain on drugs"][5] 
 public service announcement had any serious effect. It's badly acted, it's 
 nonsensical and the message it to much on the nose. 
 
@@ -56,12 +50,12 @@ some may see them as educational, but that is just confirming your biases.
 I am talking about something like the movie "The Queen":
 
 <div class="center">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mqL42sjb96I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="yt-embed" data-video="mqL42sjb96I"></div>
 </div>
 
 <div class="pull-left">
 <a href="https://www.theweek.co.uk/55612/will-prince-charles-ever-be-king">
-<img src="https://cdn2.theweek.co.uk/sites/theweek/files/2016/04/160420_queen_graphic_0.jpg" alt="Should the Queen Abdicate: 1990 50%, 2010: 20%" title="Are you sure that is not the age of the queen?" width="300">
+<img src="https://mediacloud.theweek.co.uk/image/private/s--lQec70Nw--/f_auto,t_content-image-desktop@1/v1603064881/theweek/2016/04/160420_queen_graphic_0.jpg" alt="Should the Queen Abdicate: 1990 50%, 2010: 20%" title="Are you sure that is not the age of the queen?" width="300">
 </a>
 </div>
 
@@ -103,3 +97,4 @@ released in the year that acceptance has just tilted back favoring nuclear power
 
 [1]: https://www.youtube.com/watch?v=SsdLDFtbdrA
 [4]: https://en.wikipedia.org/wiki/Propaganda
+[5]: https://www.youtube.com/watch?v=dAHoxaphbEs

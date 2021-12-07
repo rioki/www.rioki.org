@@ -15,9 +15,8 @@ These are copyright law, trademark law and personality rights.
 Copyright Law
 -------------
 
-<div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Fu62k4K4sQ4" allowfullscreen></iframe>
-</div>
+<div class="yt-embed" data-video="Fu62k4K4sQ4"></div>
+
 *Austin Powers - Goldmember: Due to international copyright law, this
 is not Godzilla*
 

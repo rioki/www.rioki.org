@@ -11,12 +11,7 @@ with the cinematic trailer. It gave the zombie apocalypse a human touch; these
 are real families that are torn apart. It was a hart shattering experience, that
 made you mad at those zombies! 
 
-<object width="640" height="360">
-    <param name="movie" value="http://www.youtube.com/v/lZqrG1bdGtg?version=3&amp;hl=en_US"></param>
-    <param name="allowFullScreen" value="true"></param>
-    <param name="allowscriptaccess" value="always"></param>
-    <embed src="http://www.youtube.com/v/lZqrG1bdGtg?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="640" height="360" allowscriptaccess="always" allowfullscreen="true"></embed>
-</object>
+<div class="yt-link" data-video="lZqrG1bdGtg" data-thumbnail="https://i.ytimg.com/vi/lZqrG1bdGtg/hqdefault.jpg"></div>
 
 As [Yahtzee][zp] very nicely pointed out, there is actually no use in getting hyped 
 up in a game. So I laid back and waited, without much aspirations and now
