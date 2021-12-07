@@ -8,14 +8,14 @@
 {% endif %}
 <div class="clearfix"></div>
 {% for post in page.posts %}
-  <h2><a href="{{ post.url }}">{{post.title}}</a></h2>
+  <h2>{{post.title}}</h2>
   <p class="text-muted u-pull-rightt">{{ post.date|date('Y-m-d') }}</p>
   <p class="clear">&nbsp;</p>
   <p>
       {{ post.summary }}
   </p>
   <p class="pull-right">
-    <a href="{{ post.url }}" class="btn btn-primary">read more</a>
+    <a href="{{ post.url }}" class="button button-primary">read more</a>
   </p>
   <div class="clearfix"></div>
 {% endfor %}

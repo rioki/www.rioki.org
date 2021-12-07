@@ -23,6 +23,12 @@ code {
     clear: both;
 }
 
+.button.button-primary {
+    color: black;
+    background-color: orange;
+    border-color: orange;
+}
+
 /* special designs */
 
 #brand {
