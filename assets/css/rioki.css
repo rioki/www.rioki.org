@@ -19,6 +19,10 @@ code {
     background-color: silver;
 }
 
+.clearfix {
+    clear: both;
+}
+
 /* special designs */
 
 #brand {
@@ -26,7 +30,7 @@ code {
 }
 
 #brand a {
-    color: silver;
+    color: rgb(116, 116, 116);
     font-weight: lighter;
 }
 
@@ -41,12 +45,18 @@ code {
 }
 
 footer {
+    margin-top: 5em;
     clear: both;
-    color: silver;
+    color: rgb(116, 116, 116);
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 1em;
 }
 
 .text-muted {
-    color: silver;
+    color: rgb(116, 116, 116);
 }
 
 /* fixes */
@@ -59,25 +69,6 @@ article img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.videoWrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-    height: 0;
-    margin-bottom: 2em;
-}
-.videoWrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-    height: 100%;
-}
-
-iframe {
-    max-width: 100%;
 }
 
 .u-center {

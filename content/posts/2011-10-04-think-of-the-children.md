@@ -11,12 +11,7 @@ the best trailers for a video games ever. It is brilliant because it tells a
 very personal story, the tragic events that befall a young family at the brink
 of a zombie virus outbreak. 
 
-<object width="640" height="360">
-    <param name="movie" value="http://www.youtube.com/v/lZqrG1bdGtg?version=3&amp;hl=en_US"></param>
-    <param name="allowFullScreen" value="true"></param>
-    <param name="allowscriptaccess" value="always"></param>
-    <embed src="http://www.youtube.com/v/lZqrG1bdGtg?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="640" height="360" allowscriptaccess="always" allowfullscreen="true"></embed>
-</object>
+<div class="yt-link" data-video="lZqrG1bdGtg" data-thumbnail="https://i.ytimg.com/vi/lZqrG1bdGtg/hqdefault.jpg"></div>
 
 Many trailers for games are violent, but most are meaningless. But in the 
 Dead Island trailer it has sense; a father frees his daughter from zombies. 
