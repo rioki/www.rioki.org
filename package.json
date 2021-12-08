@@ -26,6 +26,7 @@
     "gulp-marked": "^1.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-util": "^3.0.8",
+    "live-server": "^1.2.1",
     "twig": "^1.15.4"
   }
 }

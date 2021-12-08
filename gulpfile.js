@@ -7,6 +7,7 @@ var   gulpUtil                      = require('gulp-util');
 const frontMatter                   = require('gulp-front-matter')
 const through2                      = require('through2')
 const twig                          = require('twig')
+const liveServer                    = require("live-server");
 
 twig.cache = false;
 
@@ -217,6 +218,14 @@ function watchTask() {
   watch('templates/*.html',   series(parallel(pagesTask, postsTask), parallel(archiveTask, indexTask)));
 }
 
+function server() {
+  liveServer.start({
+    root: "build",
+    wait: 500
+  });
+}
+
 exports.clean   = cleanTask
 exports.default = buildAll
 exports.watch   = series(buildAll, watchTask)
+exports.server  = series(buildAll, parallel(watchTask, server))
