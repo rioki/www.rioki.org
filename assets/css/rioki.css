@@ -31,6 +31,11 @@ code {
 
 /* special designs */
 
+nav {
+    padding-top: 3em;
+    margin-bottom: 5em;
+}
+
 #brand {
     font-size: 300%;
 }
@@ -48,6 +53,7 @@ code {
 
 #menu a {
     font-weight: lighter;
+    padding-left: 1em;
 }
 
 footer {
