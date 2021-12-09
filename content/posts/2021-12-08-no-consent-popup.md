@@ -77,7 +77,7 @@ data privacy policies.
 
 Let's start with task 2, as that is quite simple:
 
-### Get rid of third part CDNs
+### Get rid of third party CDNs
 
 Well, this actually half goes against the grain of what web developers have 
 done for quite some while. But this is actually half a good thing. For one
