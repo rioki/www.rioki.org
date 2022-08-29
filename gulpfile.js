@@ -39,6 +39,28 @@ function summarize(marker) {
   });
 }
 
+function fixTitle() {
+  const reTitle = /\s*#([\w\ \t]+)/;
+
+  return through2.obj(function (file, enc, cb) {
+    if (file.page.title) {
+      return cb(null, file);
+    }
+
+    const contents = file.contents.toString();
+    const match = contents.match(reTitle);
+    if (!match) {
+      return cb(null, file);
+    }
+
+    const title = match[1].trim();
+    file.page.title = title;
+    file.contents = Buffer.from(contents.replace(reTitle, ""), "utf-8");
+
+    return cb(null, file);
+  });
+}
+
 const rePostName   = /(\d{4})-(\d{1,2})-(\d{1,2})-(.*)/;
 
 function filename2date() {
@@ -175,6 +197,7 @@ function pagesTask() {
 function postsTask() {
   return src('content/posts/*.md')
       .pipe(frontMatter({property: 'page', remove: true}))
+      .pipe(fixTitle())
       .pipe(marked())
       .pipe(summarize('<!--more-->'))
       .pipe(filename2date())
