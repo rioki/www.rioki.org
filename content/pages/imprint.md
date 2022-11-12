@@ -12,7 +12,7 @@ For the content of this website is legally responsible:
 If you want to contact me via email, email me at [sean.farrell@rioki.org][1].
 
 All material on this site unless otherwise stated is copyright 
-&copy; 2009-2021 Sean Farrell. 
+&copy; 2009-2022 Sean Farrell. 
 
 ## Privacy Policy
 

@@ -23,7 +23,7 @@ code {
     clear: both;
 }
 
-.button.button-primary {
+.button.button-primary, .button.button-primary:hover {
     color: black;
     background-color: orange;
     border-color: orange;
