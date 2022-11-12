@@ -3,7 +3,7 @@ const {series, parallel, src, dest, watch} = require('gulp')
 const clean                         = require('gulp-clean')
 const rename                        = require('gulp-rename')
 const marked                        = require('gulp-marked')
-var   gulpUtil                      = require('gulp-util');
+var   Vinyl                         = require('vinyl');
 const frontMatter                   = require('gulp-front-matter')
 const through2                      = require('through2')
 const twig                          = require('twig')
@@ -103,7 +103,7 @@ function dummy(file, title) {
 
   if (site)
   {
-    var file = new gulpUtil.File({
+    var file = new Vinyl({
       path: file,
       contents: Buffer.from('', 'utf8')
     })
@@ -132,7 +132,7 @@ function posts(basename, count) {
       posts.push(post);
       c++;
       if (c == count) {
-        const file = new gulpUtil.File({
+        const file = new Vinyl({
           path: basename + (page == 0 ? '' : page) + '.html',
           contents: Buffer.from('', 'utf-8')
         });
@@ -151,7 +151,7 @@ function posts(basename, count) {
     });
 
     if (posts.length != 0) {
-      const file = new gulpUtil.File({
+      const file = new Vinyl({
         path: basename + (page == 0 ? '' : page) + '.html',
         contents: Buffer.from('', 'utf-8')
       });
@@ -237,7 +237,7 @@ function watchTask() {
   watch('assets/**/*',        assetsTask);
   watch('content/media/**/*', mediaTask);
   watch('content/pages/*.md', pagesTask);
-  watch('content/posts/*.md', postsTask);
+  watch('content/posts/*.md', series(postsTask, parallel(archiveTask, indexTask)));
   watch('templates/*.html',   series(parallel(pagesTask, postsTask), parallel(archiveTask, indexTask)));
 }
 
