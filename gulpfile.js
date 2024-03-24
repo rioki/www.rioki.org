@@ -40,7 +40,7 @@ function summarize(marker) {
 }
 
 function fixTitle() {
-  const reTitle = /\s*#([\w\ \t]+)/;
+  const reTitle = /\s*#([ -~]+)/;
 
   return through2.obj(function (file, enc, cb) {
     if (file.page.title) {
