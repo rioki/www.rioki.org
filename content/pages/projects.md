@@ -82,7 +82,7 @@ find most of my work on [github](https://github.com/rioki)
 
 * [www.rioki.org](http://www.rioki.org)
   This blog.
-* [genbukanmikayama.de](https://www.genbukanmikayama.de/)]
+* [genbukanmikayama.de](https://www.genbukanmikayama.de/)
   The website of my Nunjutsu Dojo
 * [genbukan.de](https://genbukan.de/)
   The official website of Genbukan Germany.
