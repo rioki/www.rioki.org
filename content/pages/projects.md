@@ -84,8 +84,12 @@ find most of my work on [github](https://github.com/rioki)
   This blog.
 * [genbukanmikayama.de](https://www.genbukanmikayama.de/)]
   The website of my Nunjutsu Dojo
+* [genbukan.de](https://genbukan.de/)
+  The official website of Genbukan Germany.
 * [victoria-benner.de](http://www.victoria-benner.de/)
   Designed the Tumblr template.
+* [tactical-defense-system.com](https://tactical-defense-system.com)
+  The official marketing website for Tactical Defense System.
 
 ## Copy Editing
 
@@ -94,3 +98,5 @@ Design and layout of the following books:
 * [Schattensprung](https://www.amazon.de/Lotte-Schattensprung-Victoria-Benner/dp/3737572259/)
 * [Wiedersehen in Berlin](https://www.amazon.de/Lotte-Wiedersehen-Berlin-Victoria-Benner/dp/3737587752)
 * [Lotte in London](https://www.amazon.de/gp/product/3745030893)
+* [Lotte in London – Kurzgeschichten](https://www.amazon.de/dp/B09BFF8PPJ)
+* [Selbstverteidigung für Frauen Und Jugendliche](https://www.amazon.de/dp/375848541X)
