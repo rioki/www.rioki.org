@@ -46,7 +46,7 @@ you have other problems.
 
 Generally, the entire team should be present. But there is a caveat; it is
 common for scrum  teams to consider people like the product owner part of the
-team. But the product owner has a conflict of interest, they are both a team
+team. But the product owner may have a conflict of interest, they are both a team
 member and are responsible to the customer and other stakeholders. It is
 important that honest status can be freely shared and problems discussed
 without running the risk of someone “helping out”.
