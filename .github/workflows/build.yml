@@ -1,4 +1,4 @@
-name: NodeJS with Gulp
+name: Node.js Build and Deploy
 
 on:
   push:
@@ -8,19 +8,20 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest   
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Use Node.js
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v4
       with:
-        node-version: 16.x
+        node-version: 20.x
+        cache: npm
 
     - name: Build
       run: |
-        npm install
-        gulp
+        npm ci
+        npm run build
     - name: S3 Sync
       uses: jakejarvis/s3-sync-action@master
       if: github.ref == 'refs/heads/master'

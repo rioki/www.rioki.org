@@ -1,7 +1,7 @@
 const path = require('path')
+const fs = require('fs/promises')
 const { Readable } = require('stream')
 const { series, parallel, src, dest, watch } = require('gulp')
-const { deleteAsync } = require('del')
 const rename = require('gulp-rename')
 const matter = require('gray-matter')
 const { marked } = require('marked')
@@ -203,7 +203,7 @@ function posts(basename, count) {
 }
 
 function cleanTask() {
-  return deleteAsync([`${PATHS.build}/**`, `!${PATHS.build}`])
+  return fs.rm(PATHS.build, { recursive: true, force: true })
 }
 
 function assetsTask() {
