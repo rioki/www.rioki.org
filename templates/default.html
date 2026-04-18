@@ -6,30 +6,23 @@
     <title>{{ page.title }} - {{ site.title }}</title>
     <meta name="author" content="{{ site.author }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/fonts.css"> 
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/yt-consent.css">
-    <link rel="stylesheet" href="/css/rioki.css">  
   </head>
-  <body> 
-    <div class="container">
-      <nav class="row">      
-        <div id="brand" class="one-half column"><a href="/">{{ site.title }}</a></div>
-        <div id="menu" class="one-half column">
-          <a href="/journal.html">Journal</a>
-          <a href="/projects.html">Projects</a>
-        </div>        
-      </nav>
-      <article>
-        {% block content %}{% endblock %}
-      </article>      
-      <footer>
-        <p>&copy;2009 - 2022 Sean "rioki" Farrell</p>
-        <p><a href="/imprint.html">Imprint</a></p>
-        <p>This page does not use cookies, nor does it store any data.</p>
-      </footer>    
-    </div> 
+  <body class="bg-white text-black"> 
+    <nav class="max-w-4xl mx-auto mb-10 flex pt-10 pb-20">     
+      <div id="brand" class="text-4xl text-gray-500 grow"><a href="/">{{ site.title }}</a></div>
+      <div id="menu" class="text-2xl">
+        <a href="/journal.html" class="text-orange-500">Journal</a>
+        <a href="/projects.html" class="text-orange-500">Projects</a> 
+      </div>    
+    </nav>
+    {% block content %}{% endblock %}   
+    <footer class="max-w-4xl mx-auto text-center mt-30 mb-10">
+      <p>&copy;2009 - 2026 Sean "rioki" Farrell</p>
+      <p><a href="/imprint.html" class="text-orange-500 underline">Imprint</a></p>
+      <p>This page does not use cookies, nor does it store any data.</p>
+    </footer>    
     <script src="/js/yt-consent.js"></script>  
     <script>
       ytConsent();

@@ -5,14 +5,16 @@ let gulpClean       = require("gulp-clean");
 let gulpRename      = require("gulp-rename");
 let gulpFrontMatter = require("gulp-front-matter");
 let gulpMarked      = require("gulp-marked");
+let gulpPostcss     = require("gulp-postcss");
 
 let stream          = require("stream"); 
-let Vinyl           = require("vinyl")
-let through2        = require("through2")
-let twig            = require("twig")
-let liveServer      = require("live-server")
+let Vinyl           = require("vinyl");
+let through2        = require("through2");
+let twig            = require("twig");
+let liveServer      = require("live-server");
+let tailwindcss     = require("@tailwindcss/postcss");
 
-twig.cache = false
+twig.cache(false);
 
 let site = require("./site.json")
 
@@ -83,7 +85,7 @@ function filename2date() {
       let postBasename = match[4]
 
       file.page.date = new Date(`${year}-${month}-${day}`)
-      file.page.url = `/${year}/${month}/${day}/${postBasename}.html`
+      file.page.url = `/${year}/${month}/${day}/${postBasename}`
     }
 
     cb(null, file)
@@ -201,6 +203,12 @@ function mediaTask() {
     .pipe(gulp.dest("build/media"));
 }
 
+function cssTask() {
+  return gulp.src("templates/*.css")
+    .pipe(gulpPostcss([tailwindcss()]))
+    .pipe(gulp.dest("build/css"));
+}
+
 function pagesTask() {
   return gulp.src("content/pages/*.md")
     .pipe(gulpFrontMatter({ property: "page", remove: true }))
@@ -235,9 +243,21 @@ function indexTask() {
     .pipe(gulp.dest("build"))
 }
 
+function resetStateTask(cb) {
+  delete require.cache[require.resolve("./site.json")];
+  site = require("./site.json");
+  site.time = new Date();
+  site.posts = [];
+  twig.extend(function (Twig) {
+    Twig.Templates.registry = {};
+  });
+  cb();
+}
+
 let buildAll = gulp.series(
   initializeSiteTask,
-  gulp.parallel(assetsTask, mediaTask, pagesTask, postsTask),
+  resetStateTask,
+  gulp.parallel(assetsTask, mediaTask, pagesTask, postsTask, cssTask),
   gulp.parallel(archiveTask, indexTask)
 )
 
@@ -246,7 +266,8 @@ function watchTask() {
   gulp.watch("content/media/**/*", mediaTask)
   gulp.watch("content/pages/*.md", pagesTask)
   gulp.watch("content/posts/*.md", gulp.series(postsTask, gulp.parallel(archiveTask, indexTask)))
-  gulp.watch("templates/*.html", gulp.series(gulp.parallel(pagesTask, postsTask), gulp.parallel(archiveTask, indexTask)))
+  gulp.watch("templates/*.html", gulp.series(gulp.parallel(pagesTask, postsTask, cssTask), gulp.parallel(archiveTask, indexTask)))
+  gulp.watch("templates/*.css", cssTask)
 }
 
 function serverTask() {

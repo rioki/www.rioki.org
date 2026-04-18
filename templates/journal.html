@@ -1,29 +1,36 @@
 {% extends 'default.html' %}
 {% block content %}
-{% if page.prevPage %}
-<a href="/{{ page.prevPage }}" class="u-pull-left">Newer Posts</a>
-{% endif %}
-{% if page.nextPage %}
-<a href="/{{ page.nextPage }}" class="u-pull-right">Older Posts</a>
-{% endif %}
+<div class="max-w-4xl mx-auto my-10 flex">
+  {% if page.prevPage %}
+  <a href="/{{ page.prevPage }}" class="text-orange-500 underline">Newer Posts</a>
+  {% endif %}
+  <span class="grow"></span>
+  {% if page.nextPage %}
+  <a href="/{{ page.nextPage }}" class="text-orange-500 underline">Older Posts</a>
+  {% endif %}
+</div>
 <div class="clearfix"></div>
 {% for post in page.posts %}
-  <h2>{{post.title}}</h2>
-  <p class="text-muted u-pull-rightt">{{ post.date|date('Y-m-d') }}</p>
-  <p class="clear">&nbsp;</p>
-  <p>
+  <section class="max-w-4xl mx-auto my-10">
+  <h2 class="text-3xl">{{post.title}}</h2>
+  <p class="float-right text-orange-500">{{ post.date|date('Y-m-d') }}</p>
+  <p class="float-none">&nbsp;</p>
+  <div class="prose max-w-none prose-pre:bg-gray-100 prose-pre:text-gray-800  prose-a:text-orange-500 text-justify">
       {{ post.summary }}
+  </div>
+  <p class="text-right">
+    <a href="{{ post.url }}" class="text-orange-500 underline">read more</a>
   </p>
-  <p class="pull-right">
-    <a href="{{ post.url }}" class="button button-primary">read more</a>
-  </p>
-  <div class="clearfix"></div>
+  <div class="float-none"></div>
+  </section>
 {% endfor %}
-{% if page.prevPage %}
-<a href="/{{ page.prevPage }}" class="u-pull-left">Newer Posts</a>
-{% endif %}
-{% if page.nextPage %}
-<a href="/{{ page.nextPage }}" class="u-pull-right">Older Posts</a>
-{% endif %}
-<div class="clearfix"></div>
+<div class="max-w-4xl mx-auto my-10 flex">
+  {% if page.prevPage %}
+  <a href="/{{ page.prevPage }}" class="text-orange-500 underline">Newer Posts</a>
+  {% endif %}
+  <span class="grow"></span>
+  {% if page.nextPage %}
+  <a href="/{{ page.nextPage }}" class="text-orange-500 underline">Older Posts</a>
+  {% endif %}
+</div>
 {% endblock %}
