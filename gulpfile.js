@@ -192,12 +192,12 @@ function cleanTask() {
 }
 
 function assetsTask() {
-  return gulp.src("assets/**/*")
+  return gulp.src("assets/**/*", { encoding: false })
     .pipe(gulp.dest("build"));
 }
 
 function mediaTask() {
-  return gulp.src("content/media/**/*")
+  return gulp.src("content/media/**/*", { encoding: false })
     .pipe(gulp.dest("build/media"));
 }
 
