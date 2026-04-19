@@ -5,7 +5,7 @@ title: "Getting Rid of the Consent Popup."
 How do you get rid of the consent popup? 
 
 Simple, don't use cookies or store the users data. As simple as this sounds,
-unfortunatly this is not as simple to implement.
+unfortunately this is not as simple to implement.
 
 Before we get into the details, let's look at why we needed a consent popup
 in the first place. There are basically 3 pieces of legislation of interest:
@@ -199,12 +199,12 @@ And before you ask, No YouTube's "privacy enhanced" embed codes [does not work i
 
 I don't have ads and honestly I don't know a way how to make them GDPR compliant.
 
-### Saying Goodby to Google Analytics
+### Saying Goodbye to Google Analytics
 
-Getting rid of Google Analytics actually feels odd, but unfortunatly if you 
+Getting rid of Google Analytics actually feels odd, but unfortunately if you 
 came this far, you need to do this last step.
 
-But you still are not flying blind, most CDN maintain aggraded access 
+But you still are not flying blind, most CDN maintain aggregated access 
 statistics and this will still tell you how many people visited your site and
 which pages they visited. 
 

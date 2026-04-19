@@ -6,7 +6,7 @@ tags:
     - fail
 ---
 
-These last two weeks had it's ups and downs. I learned allot about my engine
+These last two weeks had it's ups and downs. I learned a lot about my engine
 design, what I was doing wrong and what I was doing right. But I also learned 
 that I am somewhat in an impasse. My current design hit a snag when I tried to
 integrate a console and scripting. Engine wise these two weeks where a loss, but

@@ -126,7 +126,7 @@ a shortcut here and simply use a [flex scanner]. Writing a simple parser by
 hand is manageable, but a scanner borders on insanity or inefficiency. The 
 scanner can be found in [scan.l].
 
-The next step was the [parser]. This is a classical case of a recursive decent 
+The next step was the [parser]. This is a classical case of a recursive descent 
 parser. I did not develop a formal grammar first, since that would have been 
 overkill. The scanner runs line oriented, but does not enforce placement of
 statements, like "real" assemblers do. To simplify the generation step, I also

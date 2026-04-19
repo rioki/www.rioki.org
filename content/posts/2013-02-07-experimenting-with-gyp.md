@@ -219,8 +219,8 @@ This all will bring you actually quite far. It creates some quite generic projec
 though and you might expect something differently. In the case you are used to
 the "Debug" and "Release" configurations and your developers will expect it. 
 
-Appart from the conditions, there are also configurations and build system 
-specific configurations. This is a good thing to put into a centra *.gypi file 
+Apart from the conditions, there are also configurations and build system 
+specific configurations. This is a good thing to put into a central *.gypi file 
 for use by all *.gyp targets/projects. A configuration might look like so:
 
     {

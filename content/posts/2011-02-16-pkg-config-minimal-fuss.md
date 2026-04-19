@@ -19,7 +19,7 @@ you should not need to build other peoples software! The good news,
 getting pkg-config with minimal fuss is possible. Let me show you how. 
 
 What is really nice, the people at <a href="http://www.gtk.org">Gtk+</a> 
-have all the libraries precompiled in seperate zip archives. Head over 
+have all the libraries precompiled in separate zip archives. Head over 
 to http://www.gtk.org/download-windows.html. You will need the glib <a 
 href="http://ftp.gnome.org/pub/gnome/binaries/win32/glib/2.26/glib_2.26. 
 1-1_win32.zip">run-time</a>, the gettext-runtime <a 

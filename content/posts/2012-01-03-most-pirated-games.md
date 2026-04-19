@@ -111,7 +111,7 @@ peer pressure will basically ensure that most people get a legitimate version,
 so they can play with their peers that got the legit version.
 
 Many pirates are potential customers, I know a few that try before they buy. 
-But trust in a franchise will buy you allot of people. That is one of the reasons
+But trust in a franchise will buy you a lot of people. That is one of the reasons
 why Left 4 Dead saw way worse sales/download ratio than Left 4 Dead 2; people
 trusted in the franchise. With both MW3 and BF3 there where both record breaking
 pre-orders, which indicates the huge trust people put into franchises.

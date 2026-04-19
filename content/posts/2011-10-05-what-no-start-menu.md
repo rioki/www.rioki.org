@@ -37,9 +37,9 @@ included.
 <img src="/media/windows-7-start.png" />
 
 The start menu has a number of issues. The first issue is the tiny space you 
-have to look for your application. Manual searching is definitly not an options
+have to look for your application. Manual searching is definitely not an options
 and you basically need to resort to use the search function. On a standard 
-install, that lived a while you will definitly find nothing.
+install, that lived a while you will definitely find nothing.
 
 The second issue I have is places. Fine, I get the idea that there should be 
 multiple access points for different users, but I never understood why they 

@@ -117,7 +117,7 @@ The first problem here is clear, there is no simple way implement the different
 attribute sets between the different shapes. One solution could have been that
 the traits define a typedef to a struct that contains the attributes and 
 instantiate this in the body of the `Shape` class. But I opted in this case in 
-the least common denominator aproach, having a `vec2` with a size. The circle 
+the least common denominator approach, having a `vec2` with a size. The circle 
 is simply contained in a virtual rectangle defined by size 
 (i.e. `min(size[0], size[1])`).
 

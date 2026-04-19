@@ -596,7 +596,7 @@ in the parser. Here is the actual implementation:
 The `error` function takes the line and file info with the error message and 
 makes a nice "file(line): msg" string and throws it via a `runtime_error`. 
 
-If you are writing a parser for a programing language you may want to look into 
+If you are writing a parser for a programming language you may want to look into 
 error recovery. The basic idea it to log the error onto some error stream and 
 return the ERROR token. Then one of the overlaying functions then try to find 
 the next token that makes sense and continue parsing from there. But since this 

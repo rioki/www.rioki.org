@@ -7,20 +7,20 @@ tags:
 ---
 
 I recently looked into [Ruby on Rails][1] to see what the hype is or rather
-was about. I even found a [niffty introduction][2] to the subject and found along
+was about. I even found a [nifty introduction][2] to the subject and found along
 the way the nifty little language ruby. I probably will [not use it for any 
 serious projects][3], but it is nice to know I have a new tool in my tool belt.
 
-I wanted to show a coworker my new found knowlage about this niffty language,
-but when trying to use gem I was locked out. I was quite aquinted with installing
+I wanted to show a coworker my new found knowledge about this nifty language,
+but when trying to use gem I was locked out. I was quite acquainted with installing
 gems directly by downloading them and invoking gem locally, because of my previous
-[jekyll experiance][4], but there should be a better way.
+[jekyll experience][4], but there should be a better way.
 
 <!--more-->
 
 At work we are a almost pure Microsoft shop and thus use a ISA-Server as proxy. 
 The ISA-Server has the unique feature that you authenticate with your system user 
-account. Although this single logon feature is quite usefull, it is like so many 
+account. Although this single logon feature is quite useful, it is like so many 
 things from Microsoft a non standard implementation. In theory the server 
 supports other standard authentication mechanisms, but these are disabled in this
 instalation.

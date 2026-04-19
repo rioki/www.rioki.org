@@ -6,7 +6,7 @@ tags:
     - rant
 ---
 
-[Dead Island][1] had allot going for it. The cinematic announce trailer is one of 
+[Dead Island][1] had a lot going for it. The cinematic announce trailer is one of 
 the best trailers for a video games ever. It is brilliant because it tells a 
 very personal story, the tragic events that befall a young family at the brink
 of a zombie virus outbreak. 

@@ -57,7 +57,7 @@ and I will go "meh", but this code, I get foam around my mouth...
 
 At first I started to clean up the code by hand. Although the task has a certain
 zen appeal, it started to bog me down. I decided to shop around for a code
-formating tool. 
+formatting tool. 
 
 Although I did not find it at first, [UniversalIdentGui] is an interesting 
 tool that can help you choose and fine tune the formatter you want to use. 
@@ -269,9 +269,9 @@ I don't know what to make of that. It is not really better.
 Conclusion
 ----------
 
-AStyle is a safe bet, I definitly don't want to break the code. It serves as 
+AStyle is a safe bet, I definitely don't want to break the code. It serves as 
 a solid stepping stone for manual cleanup. Cleanup that can't be done by 
-a code formating tool, such as changing that switch on the error code to an
+a code formatting tool, such as changing that switch on the error code to an
 if. 
 
 I also took a liking of Uncrustify. I am quite certain that I can trust the 

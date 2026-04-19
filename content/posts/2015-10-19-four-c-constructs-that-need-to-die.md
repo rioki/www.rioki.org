@@ -96,7 +96,7 @@ up stack space.
 
     std::array<Foo, 23> foos;
     
-The use of the array class solves the issue with many programing pitfalls. By
+The use of the array class solves the issue with many programming pitfalls. By
 using standard container semantics, you will seldom program a buffer overrun.    
 
 **Good Code:**

@@ -21,7 +21,7 @@ But this naive approach is common in hobby game development circles. It stems
 from the fact that the first thing you get from a game is it's graphics. As 
 a result developers start on the graphics first and then start weaving other
 elements, such as sound, AI and physics into the graphic code. Unfortunately it 
-takes allot of unlearning to realise that the proper way go is to think about 
+takes a lot of unlearning to realise that the proper way go is to think about 
 and build the model code first and then wrap the presentation layers around it.
 
 Fun fact, if you look into the OGRE wiki, you will find similar gems, like 

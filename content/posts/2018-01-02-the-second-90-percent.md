@@ -11,7 +11,7 @@ should:
 This puts it mildly, but humans are for the most part really bad at
 estimating effort.
 
-The standard project management aproach to managing large tasks with a
+The standard project management approach to managing large tasks with a
 high degree of uncertainty is to [break down the large task][1] into
 smaller and smaller tasks. The idea is that each task can be reasoned
 about and thus estimated to a higher degree of certainty. This is true,

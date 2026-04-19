@@ -73,7 +73,7 @@ bigger system.
 **Pair Programming**
 
 [Pair programming][5] is an invaluable resources, that unfortunately commonly has
-allot of resistance. Granted when you put two people together they will not
+a lot of resistance. Granted when you put two people together they will not
 work twice as fast, yet they will work at around 1.7 times the speed and
 have significantly cleaner code. If you are aiming at producing high quality 
 code, pair programming may be one of your most valuable resources. 

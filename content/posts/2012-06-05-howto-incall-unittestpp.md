@@ -6,11 +6,11 @@ tags:
     - unittest
 ---
 
-In my opingion [UnitTest++] is the most awsome unit testing framework for
+In my opinion [UnitTest++] is the most awesome unit testing framework for
 C++ ever created. The only minor downside is that the library misses an install
-rutine for when built with make. 
+routine for when built with make. 
 
-I actually wrote the procedure down a while ago, but apperently I don't have 
+I actually wrote the procedure down a while ago, but apparently I don't have 
 this article online anymore. So here I will post it again.
 
 The actual procedure is quite simple, first you build the library are normal:

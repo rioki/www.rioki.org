@@ -48,7 +48,7 @@ Here is the list of the 20 most active projects on SourceForge:
 17. DreaMule        (an eMule client)
 18. SugarCRM        (the leading CRM tool)
 19. PyQt            (python binding to QT)
-20. pseint          (a programing learning tool, Spanish)
+20. pseint          (a programming learning tool, Spanish)
 21. Network Spoofer (a WiFi phising tool)
 
 (Actually 21, SourceForge apparently can not count. Yay, zero based lists....)

@@ -20,7 +20,7 @@ it.
 
 <!--more-->
 
-The first thing that sinks in on you is the atmosphere. Allot of effort was done
+The first thing that sinks in on you is the atmosphere. A lot of effort was done
 to get the tome right, a paradise ravaged by zombies. But somehow the tone feels
 slightly off. The first issue that comes to mind is the game mechanics. Picture 
 that, you wake up confused, the hotel speakers shrill something about 

@@ -8,11 +8,11 @@ tags:
 
 When migrating from [jekyl to gulp.js][1] I was basically following jekyls lead, purely to ease the migration pains.
 
-Some point later [Daniel Naab][2] adapted my aproach. Although he build ontop of my ideas, [he played the ball out of the park][3]. What really stuck me as ingenious is the integration of [prose.io][4]. The combination of [travis-ci][5] and prose.io, means that novice users can author the website without knowing what git and a text editor is. The result is something close to a high end CMS with static generated HTML pages.
+Some point later [Daniel Naab][2] adapted my approach. Although he build ontop of my ideas, [he played the ball out of the park][3]. What really stuck me as ingenious is the integration of [prose.io][4]. The combination of [travis-ci][5] and prose.io, means that novice users can author the website without knowing what git and a text editor is. The result is something close to a high end CMS with static generated HTML pages.
 
 <!--more-->
 
-So I took some inspiration back from Daniel Naab. So here is a rundown from my enhanced glup.js powered website, this thime with wercker and prose.io support.
+So I took some inspiration back from Daniel Naab. So here is a rundown from my enhanced glup.js powered website, this time with wercker and prose.io support.
 
 The basic layout of the website is as follows:
 
@@ -32,12 +32,12 @@ The basic layout of the website is as follows:
     site.json
     gulp.js
 
-The assets folder contains the bits that make up the website's design. These are copied verbatim to the output. The content folder contains the actual raw content, this is the folder where day to day editing is done. The content is seperated into three types, the media folder contains unstructured fils, such as pictures, the page folder contains pages, that is timeless content and the posts folder conttains journal entries.
+The assets folder contains the bits that make up the website's design. These are copied verbatim to the output. The content folder contains the actual raw content, this is the folder where day to day editing is done. The content is separated into three types, the media folder contains unstructured files, such as pictures, the page folder contains pages, that is timeless content and the posts folder contains journal entries.
 The template folder contains the templates used to render the pages and posts. Finally the root folder contains all the configuration for the different services, such as the wercker.yml. 
 
-The gulpfile still works mostly like the original as described in my [jekyl to gulp.js][1] post, just the paths are cleaned up. You can see the entiere file in my [github repository][7].
+The gulpfile still works mostly like the original as described in my [jekyl to gulp.js][1] post, just the paths are cleaned up. You can see the entire file in my [github repository][7].
 
-The interseting bit that changes is that now the journal backlog paginates: 
+The interesting bit that changes is that now the journal backlog paginates: 
 
     function posts(basename, count) {
       var stream = through.obj(function(file, enc, cb) {

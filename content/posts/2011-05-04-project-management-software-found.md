@@ -6,7 +6,7 @@ tags:
 ---
 
 I have been looking for a suitable project management software for my hobby 
-projects about as long as I have hobby projects. I have tried out allot of 
+projects about as long as I have hobby projects. I have tried out a lot of 
 different solutions and none really gelled, until now.
 
 It seems that my needs have a certain disconnect from most software. The reason
