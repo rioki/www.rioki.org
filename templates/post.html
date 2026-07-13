@@ -5,6 +5,6 @@
     <h1 class="text-4xl">{{ page.title }}</h1>
     <p class="float-right text-orange-500">{{ post.date|date('Y-m-d') }}</p>
     <p class="float-none">&nbsp;</p>
-    <div class="prose max-w-none prose-pre:bg-gray-100 prose-pre:text-gray-800 prose-a:text-orange-500 text-justify">{{ content }}</div>
+    <div class="prose max-w-none prose-pre:bg-gray-100 prose-pre:text-gray-800 prose-a:text-orange-500 text-justify prose-img:h-auto prose-img:mx-auto prose-img:max-w-full sm:prose-img:max-w-[80%]">{{ content }}</div>
   </article>
 {% endblock %}

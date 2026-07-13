@@ -11,9 +11,9 @@ kind of meeting, since all this info would be shared over a coffee or at the
 water cooler. But even the best teams make sure that the stand-up is observed,
 since break down in communication can be a risky and expensive situation.
 
-<img src="/media/2022-08/standup.jpg" class="img-responsive" alt="Software developers staning in a circle.">
+![Software developers staning in a circle.](/media/2022-08/standup.jpg)
 
-<p class="attribution">"<a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/93801304@N00/6762349663">Stand up meeting</a>" by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/93801304@N00">Ben Terrett</a> is licensed under <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-nd/2.0/?ref=openverse">CC BY-NC-ND 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img></a>. </p>
+["Stand up meeting"](https://www.flickr.com/photos/93801304@N00/6762349663) by [Ben Terrett](https://www.flickr.com/photos/93801304@N00) is licensed under [CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/?ref=openverse)
 
 <!--more-->
 
