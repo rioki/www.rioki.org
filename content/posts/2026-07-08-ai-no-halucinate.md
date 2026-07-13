@@ -18,7 +18,7 @@ People were just asking something from the model it could not do. Like me asking
 
 ![Latent Space](/media/2026-07-08-latent_space.png)
 
-And this is the moment we need to talk about latent space and really understand what is going on here. Latent space is an N-dimensional space that represents all potential outputs of a neural network. In the special case of an encoder/decoder network, the vector connecting the encoder and the decoder is literally a vector into the latent space. For other networks, it is more of a conceptual idea of the potential of a model.
+And this is the moment we need to talk about [latent space](https://en.wikipedia.org/wiki/Latent_space) and really understand what is going on here. Latent space is an N-dimensional space that represents all potential outputs of a neural network. In the special case of an encoder/decoder network, the vector connecting the encoder and the decoder is literally a vector into the latent space. For other networks, it is more of a conceptual idea of the potential of a model.
 
 So for illustration purposes, let's design a bad neural network with a two-dimensional latent space and three data points in the training data. This means any request that falls close to the points will get something close to the training data. If the points are sufficiently close, there is a reasonable chance that any request that falls within the triangle the points span will give a sensible result. But anything that is far away from any point and outside of the triangle will just be a hot mess.
 
